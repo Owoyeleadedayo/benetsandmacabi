@@ -26,7 +26,7 @@ const About = () => {
           memories.
         </p>
       </div>
-      <div className="relative h-[550px] w-[500px]">
+      <div className="relative h-137.5 w-125">
         <Image
           src="/img/about.jpeg"
           alt="display"

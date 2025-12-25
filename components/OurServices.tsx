@@ -70,7 +70,7 @@ const OurServices = () => {
       <div className="w-full max-w-6xl px-12">
         <Slider {...settings}>
           <div className="px-10">
-            <div className="relative h-[500px] w-full">
+            <div className="relative h-125 w-full">
               <Image
                 src="/img/about.jpeg"
                 alt="display"
@@ -82,7 +82,7 @@ const OurServices = () => {
             </div>
           </div>
           <div className="px-10">
-            <div className="relative h-[500px] w-full">
+            <div className="relative h-125 w-full">
               <Image
                 src="/img/serve.jpg"
                 alt="display"

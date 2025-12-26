@@ -9,7 +9,7 @@ import { ArrowLeft, ArrowRight } from "lucide-react";
 function NextArrow(props: any) {
     const { onClick, currentSlide, slideCount } = props;
   
-    const isDisabled = currentSlide >= slideCount - 2; 
+    const isDisabled = currentSlide >= slideCount - 1; 
   
     return (
       <div
@@ -59,6 +59,16 @@ const OurServices = () => {
     slidesToScroll: 1,
     nextArrow: <NextArrow />,
     prevArrow: <PrevArrow />,
+    responsive: [
+      {
+        breakpoint: 768, 
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          arrows: true, 
+        },
+      },
+    ],
   };
 
   return (
@@ -93,8 +103,8 @@ const OurServices = () => {
               <p className="absolute text-xl bottom-3 px-3 font-semibold text-white">Concept Development</p>
             </div>
           </div>
-          <div className="px-10">
-            <div className="relative h-[500px] w-full">
+          <div className="px-4 md:px-10">
+            <div className="relative h-125 w-full">
               <Image
                 src="/img/about.jpeg"
                 alt="display"
@@ -104,7 +114,7 @@ const OurServices = () => {
             </div>
           </div>
           <div className="px-10">
-            <div className="relative h-[500px] w-full">
+            <div className="relative h-125 w-full">
               <Image
                 src="/img/serve.jpg"
                 alt="display"

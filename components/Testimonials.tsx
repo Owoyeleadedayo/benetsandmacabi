@@ -9,7 +9,7 @@ const Testimonials = () => {
         <h2 className="text-[#0071B3] text-[30px] font-semi-bold font-(family-name:--font-oleo)">
           Testimonials
         </h2>
-        <div className="w-full max-w-[600px]">
+        <div className="w-full max-w-95 md:max-w-150">
           <Carousel dots={false} slidesToShow={1} autoplay autoplaySpeed={4000}>
             <div className="flex flex-col max-w-2xl w-full bg-white justify-center items-center px-6 py-8 mx-auto shadow-lg rounded-sm">
               <p className="text-md font-light">
@@ -20,7 +20,7 @@ const Testimonials = () => {
               </p>
               <div className="flex w-full justify-between items-center mt-4">
                 <div className="flex gap-3">
-                  <div className="relative w-[100px] h-[100px] border-4 border-[#0071B3] rounded-full">
+                  <div className="relative w-25 h-25 border-4 border-[#0071B3] rounded-full">
                     <Image
                       src="/img/cc.jpg"
                       alt="display"
@@ -38,7 +38,7 @@ const Testimonials = () => {
                   </div>
                 </div>
 
-                <div className="relative w-[50px] h-[50px] mt-6">
+                <div className="relative w-12.5 h-12.5 mt-6">
                   <Image
                     src="/img/Container.png"
                     alt="display"
@@ -58,7 +58,7 @@ const Testimonials = () => {
               </p>
               <div className="flex w-full justify-between items-center mt-4">
                 <div className="flex gap-3">
-                  <div className="relative w-[100px] h-[100px] border-4 border-[#0071B3] rounded-full">
+                  <div className="relative w-25 h-25 border-4 border-[#0071B3] rounded-full">
                     <Image
                       src="/img/cc.jpg"
                       alt="display"
@@ -76,7 +76,7 @@ const Testimonials = () => {
                   </div>
                 </div>
 
-                <div className="relative w-[50px] h-[50px] mt-6">
+                <div className="relative w-12.5 h-12.5 mt-6">
                   <Image
                     src="/img/Container.png"
                     alt="display"

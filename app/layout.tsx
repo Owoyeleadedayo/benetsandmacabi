@@ -4,6 +4,7 @@ import type { Metadata } from "next";
 import { Oleo_Script } from 'next/font/google'
 
 import "./globals.css";
+import Footer from "@/components/Footer";
 
 const montserrat = localFont({
   src: "./fonts/MontserratVF.ttf",
@@ -35,6 +36,7 @@ export default function RootLayout({
       >
         <Navbar />
         {children}
+        <Footer />
       </body>
     </html>
   );

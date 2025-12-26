@@ -11,7 +11,7 @@ import React from "react";
 const page = () => {
   return (
     <>
-      <div className="flex relative h-125 bg-[url('/img/about.jpg')] bg-no-repeat bg-cover bg-center">
+      <div className="flex relative min-h-[50vh] md:h-125 bg-[url('/img/about.jpg')] bg-no-repeat bg-cover bg-center">
         <div className="absolute inset-0 bg-black/40"></div>
         <div className="absolute flex flex-col w-full h-full justify-center items-center px-10 md:px-20 mt-10 gap-3">
           <p className="text-2xl md:max-w-lg md:text-5xl text-[#FFF] font-(family-name:--font-oleo) text-center capitalize">
@@ -24,7 +24,7 @@ const page = () => {
         <p className="text-[#0071B3] text-[30px]  font-semi-bold font-(family-name:--font-oleo)">
           Our mission, vision, and values
         </p>
-        <div className="grid grid-cols-2 items-center justify-center gap-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 items-center justify-center gap-5 px-5 md:px-0 md:gap-10">
           <div className="flex items-center gap-5">
             <div className="relative h-25 w-25">
               <Image
@@ -56,7 +56,7 @@ const page = () => {
             </p>
           </div>
 
-          <div className="col-span-2 flex items-center  justify-center gap-5">
+          <div className="col-span-1 md:col-span-2 flex items-center justify-center gap-5">
             <div className="relative h-25 w-25">
               <Image
                 src="/img/bino.png"
@@ -73,8 +73,8 @@ const page = () => {
       </div>
       <OurServices />
       <OurClients />
-      <div className="flex w-full py-10 items-center justify-center">
-        <p className="font-semibold text-2xl text-black">
+      <div className="flex w-full py-5 md:py-10 px-5 md:px-0  items-center justify-center">
+        <p className="font-semibold text-center text-lg md:text-2xl text-black">
           Want to be part of our creative team?{" "}
           <Link href={"/joinus"} className="text-[#0071B3] cursor-pointer hover:text-[#134a67]">
             Join Our Team

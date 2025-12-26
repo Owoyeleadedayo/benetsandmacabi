@@ -35,7 +35,7 @@ const page = () => {
   ];
   return (
     <>
-      <div className="flex relative h-[500px] bg-[url('/img/services.jpg')] bg-no-repeat bg-cover bg-center">
+      <div className="flex relative min-h-[50vh] md:h-125 bg-[url('/img/services.jpg')] bg-no-repeat bg-cover bg-center">
         <div className="absolute inset-0 bg-black/40"></div>
         <div className="absolute flex flex-col w-full h-full justify-center items-center px-10 md:px-20 mt-10 gap-3">
           <p className="text-2xl md:max-w-lg md:text-5xl text-[#FFF] font-(family-name:--font-oleo) text-center capitalize">
@@ -44,11 +44,11 @@ const page = () => {
         </div>
       </div>
       {content.map((content) => (
-        <div key={content.id} className="flex flex-col bg-[#EBEBEB] py-6 m-14 justify-center items-center rounded-sm shadow-md gap-6">
-        <p className="text-[#0071B3] text-[30px]  font-semibold">
+        <div key={content.id} className="flex flex-col bg-[#EBEBEB] py-6 m-5 md:m-14 justify-center items-center rounded-sm shadow-md gap-6">
+        <p className="text-[#0071B3] text-[25px] md:text-[30px] text-center font-semibold">
           {content.title}
         </p>
-        <div className="relative w-full h-[550px]">
+        <div className="relative w-full h-100 md:h-137.5">
           <Image
             src={content.img}
             alt="Client"
@@ -57,7 +57,7 @@ const page = () => {
           />
         </div>
 
-        <div className="flex w-full justify-between items-center px-6">
+        <div className="flex flex-col md:flex-row w-full justify-start md:justify-between items-start md:items-center px-6 gap-5 md:gap-0">
           <p className="max-w-2xl text-md font-medium text-black">
             {content.desc}
           </p>

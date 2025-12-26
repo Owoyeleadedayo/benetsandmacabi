@@ -6,7 +6,7 @@ import React from "react";
 const Footer = () => {
   return (
     <div className="bg-[#0071B3] w-full flex flex-col gap-6">
-      <div className="grid grid-cols-1 md:grid-cols-5 justify-center pt-16 md:px-14 px-8 gap-10 md:gap-20">
+      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-5 justify-center pt-16 md:px-14 px-8 gap-10 md:gap-10 xl:gap-20">
         <div className="flex flex-col gap-6 "> 
           <Link href={"/"} className="flex justify-start items-start">
             <div className="relative  w-50 h-17.5">
@@ -82,7 +82,7 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        <div className="col-span-2 flex flex-col gap-4 ml-0 md:ml-20">
+        <div className="col-span-2 flex flex-col gap-4 ml-0 xl:ml-20">
           <p className="text-white text-lg font-medium">Instagram</p>
           <div className="grid grid-cols-3 gap">
             <div className="relative w-28.75 h-21.25">

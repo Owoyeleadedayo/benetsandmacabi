@@ -9,13 +9,13 @@ import {
 const Faq = () => {
   return (
     <div className="flex flex-col w-full items-center bg-[#EBEBEB] gap-6 px-14 py-16">
-      <h1 className="text-[#0071B3] text-[30px] pb-3 font-semi-bold font-(family-name:--font-oleo)">
+      <h1 className="text-[#0071B3] text-[25px] md:text-[30px] pb-3 font-semi-bold font-(family-name:--font-oleo)">
         Frequently Asked Questions
       </h1>
 
       {/* Accordion */}
 
-      <div className="flex w-175 items-center mx-14 ">
+      <div className="flex w-100 md:w-175 items-center mx-14 ">
         <Accordion
           type="single"
           collapsible

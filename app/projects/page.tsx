@@ -7,7 +7,7 @@ import React from "react";
 const page = () => {
   return (
     <>
-      <div className="flex relative h-[500px] bg-[url('/img/por.jpg')] bg-no-repeat bg-cover bg-center">
+      <div className="flex relative min-h-[50vh] md:h-125 bg-[url('/img/por.jpg')] bg-no-repeat bg-cover bg-center">
         <div className="absolute inset-0 bg-black/40"></div>
         <div className="absolute flex flex-col w-full h-full justify-center items-center px-10 md:px-20 mt-10 gap-3">
           <p className="text-2xl md:max-w-lg md:text-5xl text-[#FFF] font-(family-name:--font-oleo) text-center capitalize">
@@ -19,7 +19,7 @@ const page = () => {
         <h1 className="text-[#0071B3] text-[30px]  font-semi-bold font-(family-name:--font-oleo)">
           Projects
         </h1>
-        <p className="flex w-full px-20 text-md font-medium text-black ">
+        <p className="flex w-full px-5 md:px-20 text-md font-medium text-black ">
           We specialize in creating experiences that go beyond expectations.
           From corporate and specialized events — such as conferences, product
           launches, AGMs, fashion shows, and end-of-year parties — to social

@@ -7,7 +7,7 @@ import React from "react";
 const page = () => {
   return (
     <>
-      <div className="flex relative h-125 bg-[url('/img/con.jpg')] bg-no-repeat bg-cover bg-center">
+      <div className="flex relative min-h-[50vh] md:h-125 bg-[url('/img/con.jpg')] bg-no-repeat bg-cover bg-center">
         <div className="absolute inset-0 bg-black/40"></div>
         <div className="absolute flex flex-col w-full h-full justify-center items-center px-10 md:px-20 mt-10 gap-3">
           <p className="text-2xl md:max-w-lg md:text-5xl text-[#FFF] font-(family-name:--font-oleo) text-center capitalize">
@@ -15,8 +15,8 @@ const page = () => {
           </p>
         </div>
       </div>
-      <div className="grid grid-cols-3 items-center justify-center my-15 px-14">
-        <div className="flex justify-center items-center gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-3 items-start md:items-center justify-start md:justify-center my-8 md:my-15 px-5 md:px-14 gap-5">
+        <div className="flex items-start md:items-center justify-start md:justify-center gap-6">
           <div className="flex border border-[#E4EBF2] justify-center items-center p-4 rounded-full">
             <Smartphone size={30} className="text-[#0071B3]" />
           </div>
@@ -30,7 +30,7 @@ const page = () => {
             </p>
           </div>
         </div>
-        <div className="flex justify-center items-center gap-6">
+        <div className="flex items-start md:items-center justify-start md:justify-center gap-6">
           <div className="flex border border-[#E4EBF2] justify-center items-center p-4 rounded-full">
             <MapPin size={30} className="text-[#0071B3]" />
           </div>
@@ -44,7 +44,7 @@ const page = () => {
             <p className="text-base text-black font-medium">23401, Nigeria </p>
           </div>
         </div>
-        <div className="flex justify-center items-center gap-6">
+        <div className="flex items-start md:items-center justify-start md:justify-center gap-6">
           <div className="flex border border-[#E4EBF2] justify-center items-center p-4 rounded-full">
             <MailOpen size={30} className="text-[#0071B3]" />
           </div>

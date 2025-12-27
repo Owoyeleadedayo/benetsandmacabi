@@ -9,7 +9,7 @@ import {
 const Faq = () => {
   return (
     <div className="flex flex-col w-full items-center bg-[#EBEBEB] gap-6 px-14 py-16">
-      <h1 className="text-[#0071B3] text-[25px] md:text-[30px] pb-3 font-semi-bold font-(family-name:--font-oleo)">
+      <h1 className="text-[#0071B3] text-[23px] md:text-[30px] pb-3 font-semi-bold font-(family-name:--font-oleo)">
         Frequently Asked Questions
       </h1>
 
@@ -26,13 +26,13 @@ const Faq = () => {
             <AccordionTrigger className="flex ">
               <div className="flex items-center gap-3">
                 <div className="w-6 h-6 bg-[#0071B3] rounded-full" />
-                <p className="text-black font-medium text-lg">
+                <p className="text-black font-medium text-base lg:text-lg">
                   What types of events do you plan?
                 </p>
               </div>
             </AccordionTrigger>
-            <AccordionContent className="pt-2 pl-9">
-              <p className="text-base text-black font-normal">
+            <AccordionContent className="pt-0 md:pt-2 pl-9">
+              <p className="text-sm md:text-base text-black font-normal">
                 Our expertise encompasses Corporate & Specialized events as well
                 as Weddings and social events.
               </p>

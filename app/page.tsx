@@ -4,6 +4,7 @@ import Celebrate from "@/components/Celebrate";
 import Newsletter from "@/components/Newsletter";
 import OurClients from "@/components/OurClients";
 import OurServices from "@/components/OurServices";
+import Projects from "@/components/Projects";
 import Testimonials from "@/components/Testimonials";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
@@ -35,6 +36,7 @@ export default function Home() {
       </div>
       <AboutUs />
       <OurServices />
+      <Projects />
       <OurClients />
       <Testimonials />
       <Newsletter />

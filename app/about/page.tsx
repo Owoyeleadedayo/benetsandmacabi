@@ -3,6 +3,7 @@ import Celebrate from "@/components/Celebrate";
 import Newsletter from "@/components/Newsletter";
 import OurClients from "@/components/OurClients";
 import OurServices from "@/components/OurServices";
+import Projects from "@/components/Projects";
 import Testimonials from "@/components/Testimonials";
 import Image from "next/image";
 import Link from "next/link";
@@ -72,6 +73,7 @@ const page = () => {
         </div>
       </div>
       <OurServices />
+      <Projects />
       <OurClients />
       <div className="flex w-full py-5 md:py-10 px-5 md:px-0  items-center justify-center">
         <p className="font-semibold text-center text-lg md:text-2xl text-black">

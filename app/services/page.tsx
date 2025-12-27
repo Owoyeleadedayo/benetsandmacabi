@@ -1,6 +1,7 @@
 import Celebrate from "@/components/Celebrate";
 import Newsletter from "@/components/Newsletter";
 import OurClients from "@/components/OurClients";
+import Projects from "@/components/Projects";
 import Testimonials from "@/components/Testimonials";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
@@ -67,6 +68,7 @@ const page = () => {
         </div>
       </div>
       ))}
+      <Projects />
       <OurClients />
       <Testimonials />
       <Newsletter />

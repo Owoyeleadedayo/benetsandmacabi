@@ -63,7 +63,7 @@ const page = () => {
             {content.desc}
           </p>
           <Button className="bg-[#0071B3] font-semibold text-white text-md cursor-pointer">
-            Sign Up
+            Book Now
           </Button>
         </div>
       </div>

@@ -2,23 +2,19 @@
 @import "tw-animate-css";
 
 
-.slick-prev,
-.slick-next {
-  z-index: 20;
+
+.swiper-button-prev,
+.swiper-button-next {
+  color: #000;
 }
 
-.slick-prev:before,
-.slick-next:before {
-  color: #0071B3; 
-  font-size: 30px;
+.swiper-pagination-bullet-active {
+  background: #000;
 }
 
 @media (max-width: 767px) {
-  .slick-slide {
-    width: 100% !important;
-  }
-
-  .slick-track {
-    display: flex !important;
+  .swiper-button-next,
+  .swiper-button-prev {
+    display: none;
   }
 }

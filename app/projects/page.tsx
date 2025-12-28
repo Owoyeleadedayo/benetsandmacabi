@@ -1,6 +1,7 @@
 import Celebrate from "@/components/Celebrate";
 import Newsletter from "@/components/Newsletter";
 import OurClients from "@/components/OurClients";
+import ProjectsContent from "@/components/ProjectsContent";
 import Testimonials from "@/components/Testimonials";
 import React from "react";
 
@@ -33,6 +34,7 @@ const page = () => {
           memories.
         </p>
       </div>
+      <ProjectsContent />
       <OurClients />
       <Testimonials />
       <Newsletter />

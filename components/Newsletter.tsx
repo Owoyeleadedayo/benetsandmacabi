@@ -12,8 +12,8 @@ const Newsletter = () => {
         </div>
 
         <div>
-            <Input className='py-3 bg-white border-0 rounded-none w-50 md:w-62.5' placeholder='Enter your email' />
-            <Button className='bg-black py-3 border-3 border-black rounded-none text-white text-base  cursor-pointer'>Subscribe Now</Button>
+            <Input className='py-3 bg-white border-0 rounded-none w-45 md:w-62.5 text-sm md:text-base' placeholder='Enter your email' />
+            <Button className='bg-black py-3 border-3 border-black rounded-none text-white text-sm md:text-base  cursor-pointer'>Subscribe Now</Button>
         </div> 
     </div>
    </>

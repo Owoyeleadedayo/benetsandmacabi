@@ -108,7 +108,7 @@ const Footer = () => {
       </div>
       <div className="border border-[#FAF8F738]" />
       <div className="flex justify-center items-center pt-6 pb-12">
-        <p className="text-base text-white font-normal">
+        <p className="text-sm md:text-base text-white font-normal">
           © 2025 MAKABIS AND BANET. All Rights Reserved.
         </p>
       </div>

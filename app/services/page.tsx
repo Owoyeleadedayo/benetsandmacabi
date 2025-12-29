@@ -44,12 +44,13 @@ const page = () => {
           </p>
         </div>
       </div>
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 p-5 md:p-14 ">
       {content.map((content) => (
-        <div key={content.id} className="flex flex-col bg-[#EBEBEB] py-6 m-5 md:m-14 justify-center items-center rounded-sm shadow-md gap-6">
+        <div key={content.id} className="flex flex-col bg-[#EBEBEB] py-6 justify-center items-center rounded-sm shadow-md gap-6">
         <p className="text-[#0071B3] text-[25px] md:text-[30px] text-center font-semibold">
           {content.title}
         </p>
-        <div className="relative w-full h-100 md:h-137.5">
+        <div className="relative w-full h-100 shrink-0">
           <Image
             src={content.img}
             alt="Client"
@@ -58,16 +59,19 @@ const page = () => {
           />
         </div>
 
-        <div className="flex flex-col md:flex-row w-full justify-start md:justify-between items-start md:items-center px-6 gap-5 md:gap-0">
-          <p className="max-w-2xl text-md font-medium text-black">
+        <div className="flex flex-col w-full px-6 gap-6">
+          <p className="text-md font-medium text-black">
             {content.desc}
           </p>
+          <div className="flex justify-end items-end">
           <Button className="bg-[#0071B3] font-semibold text-white text-md cursor-pointer">
             Book Now
           </Button>
+          </div>
         </div>
       </div>
       ))}
+      </div>
       <Projects />
       <OurClients />
       <Testimonials />

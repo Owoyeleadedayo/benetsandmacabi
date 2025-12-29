@@ -4,7 +4,7 @@ const JoinOurTeam = () => {
   return (
     <>
       <div className="flex w-full items-center justify-center my-20">
-        <div className="flex flex-col max-w-xl bg-[#EBEBEB] py-5 px-6 rounded-md gap-3 z-3 -mr-10 shadow-md">
+        <div className="flex flex-col max-w-100 md:max-w-xl bg-[#EBEBEB] py-5 px-6 rounded-md gap-3 z-3 mr-0 md:-mr-10 shadow-md">
           <p className="text-[#0071B3] text-[30px] font-semi-bold font-(family-name:--font-oleo)">
             Join Our Team
           </p>
@@ -19,7 +19,7 @@ const JoinOurTeam = () => {
             <p className="text-black font-medium">If you are energetic, resourceful, and ready to make an impact, we
             want to meet you.</p>
         </div>
-        <div className="relative h-137.5 w-200">
+        <div className="relative hidden md:block h-137.5 w-200">
           <Image
             src="/img/das.jpg"
             alt="display"

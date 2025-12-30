@@ -58,7 +58,7 @@ const Projects = () => {
         <Link href={"/projects"}>
           <Button className="bg-[#0071B3] text-white text-base font-medium cursor-pointer">
             See More
-          </Button>
+          </Button> 
         </Link>
       </div>
     </div>

@@ -50,21 +50,21 @@ const page = () => {
         <p className="text-[#0071B3] text-[25px] md:text-[30px] text-center font-semibold">
           {content.title}
         </p>
-        <div className="relative w-full h-100 shrink-0">
+       <div className="relative w-full h-80 shrink-0">
           <Image
             src={content.img}
             alt="Client"
             fill
-            className="object-cover"
+            className="object-cover transition-transform duration-300 hover:scale-101 hover:brightness-105"
           />
         </div>
 
         <div className="flex flex-col w-full px-6 gap-6">
-          <p className="text-md font-medium text-black">
+          <p className="text-base font-normal text-black">
             {content.desc}
           </p>
           <div className="flex justify-end items-end">
-          <Button className="bg-[#0071B3] font-semibold text-white text-md cursor-pointer">
+          <Button className="bg-[#0071B3] font-medium text-white text-md cursor-pointer">
             Book Now
           </Button>
           </div>

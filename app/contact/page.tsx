@@ -15,7 +15,7 @@ const page = () => {
           </p>
         </div>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-3 items-start md:items-center justify-start md:justify-center my-8 md:my-15 px-5 md:px-14 gap-5">
+      <div className="grid grid-cols-1 lg:grid-cols-3 items-start lg:items-center justify-start lg:justify-center my-8 lg:my-15 px-5 lg:px-14 gap-5">
         <div className="flex items-start md:items-center justify-start md:justify-center gap-6">
           <div className="flex border border-[#E4EBF2] justify-center items-center p-4 rounded-full">
             <Smartphone size={30} className="text-[#0071B3]" />

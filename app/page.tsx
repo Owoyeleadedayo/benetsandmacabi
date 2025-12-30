@@ -19,7 +19,7 @@ export default function Home() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
-            className="text-2xl max-w-62.5 md:max-w-lg md:text-5xl text-[#FFF] font-(family-name:--font-oleo) text-center capitalize leading-6 md:leading-12"
+            className="text-2xl max-w-62.5 md:max-w-xl md:text-5xl text-[#FFF] font-(family-name:--font-quattrocento) text-center capitalize leading-6 md:leading-12"
           >
             Moments into Memories Since 2009
           </motion.p>
@@ -28,7 +28,7 @@ export default function Home() {
           animate={{ opacity: 1, scale: 1 }}
           transition={{ delay: 0.4, duration: 0.5 }}
         >
-            <Button className="bg-[#0071B3] font-semi-bold text-white text-base md:text-xl">
+            <Button className="bg-[#0071B3] font-normal text-white text-base md:text-xl">
               Plan Your Events
             </Button>
           </motion.div>

@@ -30,7 +30,7 @@ const ImageItem = ({ src }: { src: string }) => (
 const Projects = () => {
   return (
     <div className="flex flex-col items-center bg-[#EBEBEB] py-16 my-16">
-      <h1 className="text-[#0071B3] text-[30px] font-medium font-(family-name:--font-oleo)">
+      <h1 className="text-[#0071B3] text-[30px] font-semibold font-(family-name:--font-quattrocento)">
         Projects
       </h1>
 

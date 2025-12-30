@@ -6,7 +6,7 @@ const Testimonials = () => {
   return (
     <>
       <div className="flex flex-col bg-[#EBEBEB] items-center justify-center py-15 gap-6">
-        <h2 className="text-[#0071B3] text-[30px] font-semi-bold font-(family-name:--font-oleo)">
+        <h2 className="text-[#0071B3] text-[30px] font-semibold font-(family-name:--font-quattrocento)">
           Testimonials
         </h2>
         <div className="w-full max-w-95 md:max-w-150">

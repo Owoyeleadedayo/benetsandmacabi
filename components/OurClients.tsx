@@ -4,7 +4,7 @@ const OurClients = () => {
   return (
    <>
         <div className='flex flex-col items-center justify-center my-15 gap-2'>
-            <h2 className="text-[#0071B3] text-[30px] font-semi-bold font-(family-name:--font-oleo)">Some of our client</h2>
+            <h2 className="text-[#0071B3] text-[30px] font-semibold font-(family-name:--font-quattrocento)">Some of our client</h2>
             <div className='grid grid-cols-2 md:grid-cols-2 xl:grid-cols-4 justify-center items-center gap-2 md:gap-8 xl:gap-16 px-8'>
                 <div className='relative h-27 md:h-32.5 w-30 md:w-32.5'>
                   <Image src={'/img/client2.png'} alt="Client" fill className="object-contain" />

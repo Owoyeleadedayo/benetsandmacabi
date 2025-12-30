@@ -12,7 +12,7 @@ import Image from "next/image";
 export default function OurServices() {
   return (
     <div className="flex flex-col items-center bg-[#EBEBEB] gap-6 py-16">
-      <h1 className="text-[#0071B3] text-[30px] font-medium font-(family-name:--font-oleo)">
+      <h1 className="text-[#0071B3] text-[30px] font-semibold font-(family-name:--font-quattrocento)">
         Our Services
       </h1>
 

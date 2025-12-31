@@ -47,7 +47,7 @@ const page = () => {
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 p-5 md:p-14 ">
       {content.map((content) => (
         <div key={content.id} className="flex flex-col bg-[#EBEBEB] py-6 justify-center items-center rounded-sm shadow-md gap-6">
-        <p className="text-[#0071B3] text-[25px] md:text-[30px] text-center font-semibold">
+        <p className="text-[#0071B3] text-[22px] md:text-[30px] text-center font-semibold">
           {content.title}
         </p>
        <div className="relative w-full h-80 shrink-0">
@@ -64,7 +64,8 @@ const page = () => {
             {content.desc}
           </p>
           <div className="flex justify-end items-end">
-          <Button className="bg-[#0071B3] font-medium text-white text-md cursor-pointer">
+          <Button className="bg-[#0071B3] text-white text-sm md:text-base cursor-pointer transition-all duration-300 ease-out
+    hover:scale-105 hover:bg-[#005f99] active:scale-95">
             Book Now
           </Button>
           </div>

@@ -35,7 +35,7 @@ export default function Home() {
                     initial={{ opacity: 0, y: 30 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, ease: "easeOut" }}
-                    className="text-2xl max-w-75 md:max-w-xl md:text-6xl text-white text-center capitalize leading-6 md:leading-12 font-medium font-(family-name:--font-quattrocento)"
+                    className="text-2xl max-w-75 md:max-w-3xl md:text-6xl text-white text-center capitalize leading-6 md:leading-12 font-medium font-(family-name:--font-quattrocento)"
                   >
                     Moments into Memories Since 2009
                   </motion.p>

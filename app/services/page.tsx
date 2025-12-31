@@ -1,3 +1,5 @@
+"use client"
+
 import Celebrate from "@/components/Celebrate";
 import Newsletter from "@/components/Newsletter";
 import OurClients from "@/components/OurClients";
@@ -5,7 +7,7 @@ import Projects from "@/components/Projects";
 import Testimonials from "@/components/Testimonials";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
-import React from "react";
+import { motion } from "framer-motion";
 
 const page = () => {
   const content = [
@@ -36,12 +38,14 @@ const page = () => {
   ];
   return (
     <>
-      <div className="flex relative min-h-[50vh] md:h-125 bg-[url('/img/services.jpg')] bg-no-repeat bg-cover bg-center">
+      <div className="flex relative min-h-[50vh] md:h-[80vh] bg-[url('/img/serr.jpg')] bg-no-repeat bg-cover bg-end">
         <div className="absolute inset-0 bg-black/40"></div>
         <div className="absolute flex flex-col w-full h-full justify-center items-center px-10 md:px-20 gap-3">
-          <p className="text-2xl md:max-w-lg md:text-5xl text-[#FFF] font-medium font-(family-name:--font-quattrocento) text-center capitalize">
-            Services
-          </p>
+          <motion.p initial={{ opacity: 0, y: 30 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.8, ease: "easeOut" }} className="text-2xl md:max-w-lg md:text-5xl text-[#FFF] font-medium font-(family-name:--font-quattrocento) text-center capitalize">
+           Our Services
+          </motion.p>
         </div>
       </div>
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 p-5 md:p-14 ">

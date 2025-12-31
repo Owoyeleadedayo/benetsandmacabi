@@ -12,7 +12,7 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 
 export default function Home() {
-  const banners = ["/img/banner.jpg", "/img/f11.jpg", "/img/f8.jpg"];
+  const banners = ["/img/banner1.jpg", "/img/banner2.jpg", "/img/banner3.jpg"];
   
   return (
     <>
@@ -29,7 +29,7 @@ export default function Home() {
                 className="relative min-h-[60vh] md:min-h-[85vh] bg-no-repeat bg-cover bg-center"
                 style={{ backgroundImage: `url(${img})` }}
               >
-                <div className="absolute inset-0 bg-black/40"></div>
+                <div className="absolute inset-0 bg-black/50"></div>
                 <div className="absolute flex flex-col w-full h-full justify-center items-center px-10 md:px-20 md:mt-15 gap-3">
                   <motion.p
                     initial={{ opacity: 0, y: 30 }}

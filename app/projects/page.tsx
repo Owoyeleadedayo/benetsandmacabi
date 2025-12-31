@@ -1,9 +1,10 @@
+"use client"
 import Celebrate from "@/components/Celebrate";
 import Newsletter from "@/components/Newsletter";
 import OurClients from "@/components/OurClients";
 import ProjectsContent from "@/components/ProjectsContent";
 import Testimonials from "@/components/Testimonials";
-import React from "react";
+import { motion } from "framer-motion";
 
 const page = () => {
   return (
@@ -11,9 +12,11 @@ const page = () => {
       <div className="flex relative min-h-[50vh] md:h-[85vh] bg-[url('/img/por.jpg')] bg-no-repeat bg-cover bg-center">
         <div className="absolute inset-0 bg-black/40"></div>
         <div className="absolute flex flex-col w-full h-full justify-center items-center px-10 md:px-20 gap-3">
-          <p className="text-4xl md:max-w-lg md:text-6xl text-[#FFF] font-medium font-(family-name:--font-quattrocento) text-center capitalize">
-            Projects
-          </p>
+          <motion.p initial={{ opacity: 0, y: 30 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.8, ease: "easeOut" }} className="text-4xl md:max-w-lg md:text-6xl text-[#FFF] font-medium font-(family-name:--font-quattrocento) text-center capitalize">
+           Our Projects
+          </motion.p>
         </div>
       </div>
       <div className="flex flex-col items-center bg-[#EBEBEB] gap-6 py-16">

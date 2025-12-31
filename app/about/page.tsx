@@ -28,8 +28,8 @@ const page = () => {
         </div>
       </div>
       <About />
-      <div className="flex flex-col items-center justify-center gap-8 my-14">
-        <p className="text-[#0071B3] text-[30px]  font-semibold font-(family-name:--font-quattrocento)">
+      <div className="flex flex-col items-center justify-center gap-6 md:gap-8 my-14">
+        <p className="text-[#0071B3] text-[26px] md:text-[30px] font-semibold font-(family-name:--font-quattrocento)">
           Our mission, vision, and values
         </p>
         <div className="grid grid-cols-1 md:grid-cols-2 items-center justify-center gap-5 px-5 md:px-0 md:gap-10">

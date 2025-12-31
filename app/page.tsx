@@ -29,7 +29,7 @@ export default function Home() {
                 className="relative min-h-[60vh] md:min-h-[85vh] bg-no-repeat bg-cover bg-center"
                 style={{ backgroundImage: `url(${img})` }}
               >
-                <div className="absolute inset-0 bg-black/50"></div>
+                <div className="absolute inset-0 bg-black/60"></div>
                 <div className="absolute flex flex-col w-full h-full justify-center items-center px-10 md:px-20 gap-3">
                   <motion.p
                     initial={{ opacity: 0, y: 30 }}

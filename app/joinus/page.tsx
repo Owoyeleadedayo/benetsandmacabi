@@ -1,8 +1,10 @@
+"use client"
 import Celebrate from "@/components/Celebrate";
 import JoinOurTeam from "@/components/JoinOurTeam";
 import Newsletter from "@/components/Newsletter";
 import { Button } from "@/components/ui/button";
-import React from "react";
+import { motion } from "framer-motion";
+
 
 const page = () => {
     const experience = [
@@ -34,12 +36,14 @@ const page = () => {
     ]
   return (
     <>
-      <div className="flex relative h-140 bg-[url('/img/team.jpg')] bg-no-repeat bg-cover bg-center">
+      <div className="flex relative min-h-[50vh] md:h-[85vh] bg-[url('/img/team.jpg')] bg-no-repeat bg-cover bg-center">
         <div className="absolute inset-0 bg-black/40"></div>
         <div className="absolute flex flex-col w-full h-full justify-center items-center px-10 md:px-20 mt-10 gap-3">
-          <p className="text-2xl md:max-w-lg md:text-6xl text-[#FFF] font-(family-name:--font-quattrocento) text-center capitalize">
+          <motion.p initial={{ opacity: 0, y: 0 }}
+            animate={{ opacity: 1, y: 40 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}  className="text-2xl md:max-w-lg md:text-6xl text-[#FFF] font-(family-name:--font-quattrocento) text-center capitalize">
             Join Our Team
-          </p>
+          </motion.p>
         </div>
       </div>
       <JoinOurTeam />

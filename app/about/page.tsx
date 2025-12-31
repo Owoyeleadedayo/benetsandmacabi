@@ -1,3 +1,5 @@
+"use client";
+
 import About from "@/components/About";
 import Celebrate from "@/components/Celebrate";
 import Newsletter from "@/components/Newsletter";
@@ -7,17 +9,22 @@ import Projects from "@/components/Projects";
 import Testimonials from "@/components/Testimonials";
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
+import { motion } from "framer-motion";
 
 const page = () => {
   return (
     <>
-      <div className="flex relative min-h-[50vh] md:h-125 bg-[url('/img/about.jpg')] bg-no-repeat bg-cover bg-center">
-        <div className="absolute inset-0 bg-black/40"></div> 
+      <div className="flex relative min-h-[50vh] md:h-[85vh] bg-[url('/img/abbs.jpg')] bg-no-repeat bg-cover bg-center">
+        <div className="absolute inset-0 bg-black/50"></div>
         <div className="absolute flex flex-col w-full h-full justify-center items-center px-10 md:px-20 gap-3">
-          <p className="text-4xl md:max-w-lg md:text-5xl text-[#FFF] font-medium font-(family-name:--font-quattrocento) text-center capitalize">
+          <motion.p
+            initial={{ opacity: 0, y: 0 }}
+            animate={{ opacity: 1, y: 40 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            className="text-4xl md:max-w-lg md:text-6xl text-[#FFF] font-medium font-(family-name:--font-quattrocento) text-center capitalize"
+          >
             About Us
-          </p>
+          </motion.p>
         </div>
       </div>
       <About />
@@ -78,7 +85,10 @@ const page = () => {
       <div className="flex w-full py-5 md:py-10 px-5 md:px-0  items-center justify-center">
         <p className="font-semibold text-center text-lg md:text-2xl text-black">
           Want to be part of our creative team?{" "}
-          <Link href={"/joinus"} className="text-[#0071B3] cursor-pointer hover:text-[#134a67]">
+          <Link
+            href={"/joinus"}
+            className="text-[#0071B3] cursor-pointer hover:text-[#134a67]"
+          >
             Join Our Team
           </Link>{" "}
         </p>

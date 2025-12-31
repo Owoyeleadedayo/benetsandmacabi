@@ -30,12 +30,12 @@ export default function Home() {
                 style={{ backgroundImage: `url(${img})` }}
               >
                 <div className="absolute inset-0 bg-black/50"></div>
-                <div className="absolute flex flex-col w-full h-full justify-center items-center px-10 md:px-20 md:mt-15 gap-3">
+                <div className="absolute flex flex-col w-full h-full justify-center items-center px-10 md:px-20 gap-3">
                   <motion.p
                     initial={{ opacity: 0, y: 30 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, ease: "easeOut" }}
-                    className="text-2xl max-w-75 md:max-w-xl md:text-5xl text-white text-center capitalize leading-6 md:leading-12 font-medium font-(family-name:--font-quattrocento)"
+                    className="text-2xl max-w-75 md:max-w-xl md:text-6xl text-white text-center capitalize leading-6 md:leading-12 font-medium font-(family-name:--font-quattrocento)"
                   >
                     Moments into Memories Since 2009
                   </motion.p>

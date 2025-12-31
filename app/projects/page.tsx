@@ -8,10 +8,10 @@ import React from "react";
 const page = () => {
   return (
     <>
-      <div className="flex relative min-h-[50vh] md:h-125 bg-[url('/img/por.jpg')] bg-no-repeat bg-cover bg-center">
+      <div className="flex relative min-h-[50vh] md:h-[85vh] bg-[url('/img/por.jpg')] bg-no-repeat bg-cover bg-center">
         <div className="absolute inset-0 bg-black/40"></div>
         <div className="absolute flex flex-col w-full h-full justify-center items-center px-10 md:px-20 gap-3">
-          <p className="text-4xl md:max-w-lg md:text-5xl text-[#FFF] font-medium font-(family-name:--font-quattrocento) text-center capitalize">
+          <p className="text-4xl md:max-w-lg md:text-6xl text-[#FFF] font-medium font-(family-name:--font-quattrocento) text-center capitalize">
             Projects
           </p>
         </div>

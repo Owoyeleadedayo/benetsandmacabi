@@ -56,7 +56,9 @@ const Projects = () => {
 
       <div className="flex justify-center items-center mt-8">
         <Link href={"/projects"}>
-          <Button className="bg-[#0071B3] text-white text-base font-medium cursor-pointer">
+          <Button className="bg-[#0071B3] text-white text-base md:text-xl cursor-pointer transition-all duration-300 ease-out
+    hover:scale-105 hover:bg-[#005f99]
+    active:scale-95">
             See More
           </Button> 
         </Link>

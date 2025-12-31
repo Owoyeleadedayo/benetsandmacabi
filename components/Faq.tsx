@@ -9,7 +9,7 @@ import {
 const Faq = () => {
   return (
     <div className="flex flex-col w-full items-center bg-[#EBEBEB] gap-6 px-14 py-16">
-      <h1 className="text-[#0071B3] text-[23px] md:text-[30px] pb-3 font-semi-bold font-(family-name:--font-oleo)">
+      <h1 className="text-[#0071B3] text-[23px] md:text-[30px] pb-3 font-semibold font-(family-name:--font-quattrocento)">
         Frequently Asked Questions
       </h1>
 

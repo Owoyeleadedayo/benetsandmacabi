@@ -1,6 +1,5 @@
 import { Carousel } from "antd";
 import Image from "next/image";
-import React from "react";
 
 const Testimonials = () => {
   return (
@@ -12,7 +11,7 @@ const Testimonials = () => {
         <div className="w-full max-w-95 md:max-w-150">
           <Carousel dots={false} slidesToShow={1} autoplay autoplaySpeed={4000}>
             <div className="flex flex-col max-w-2xl w-full bg-white justify-center items-center px-6 py-8 mx-auto shadow-lg rounded-sm">
-              <p className="text-md font-light">
+              <p className="text-base font-normal">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                 eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis
                 aute irure dolor in reprehenderit in voluptate velit esse cillum
@@ -28,8 +27,8 @@ const Testimonials = () => {
                       className="object-cover rounded-full"
                     />
                   </div>
-                  <div className="flex flex-col justify-center items-center">
-                    <p className="text-xl text-black leading-5 font-(family-name:--font-oleo)">
+                  <div className="flex flex-col justify-center">
+                    <p className="text-xl text-black leading-5 font-semibold font-(family-name:--font-quattrocento)">
                       Zhon Done
                     </p>
                     <p className="text-xl text-[#0071B3] font-medium">
@@ -50,7 +49,7 @@ const Testimonials = () => {
             </div>
 
             <div className="flex flex-col max-w-2xl w-full bg-white justify-center items-center px-6 py-8 mx-auto shadow-lg rounded-sm">
-              <p className="text-md font-light">
+              <p className="text-base font-normal">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                 eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis
                 aute irure dolor in reprehenderit in voluptate velit esse cillum
@@ -66,8 +65,8 @@ const Testimonials = () => {
                       className="object-cover rounded-full"
                     />
                   </div>
-                  <div className="flex flex-col justify-center items-center">
-                    <p className="text-xl text-black leading-5 font-(family-name:--font-oleo)">
+                  <div className="flex flex-col justify-center">
+                    <p className="text-xl text-black leading-5 font-semibold font-(family-name:--font-quattrocento)">
                       Zhon Done
                     </p>
                     <p className="text-xl text-[#0071B3] font-medium">

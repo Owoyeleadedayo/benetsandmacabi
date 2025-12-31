@@ -13,16 +13,16 @@ const page = () => {
   return (
     <>
       <div className="flex relative min-h-[50vh] md:h-125 bg-[url('/img/about.jpg')] bg-no-repeat bg-cover bg-center">
-        <div className="absolute inset-0 bg-black/40"></div>
-        <div className="absolute flex flex-col w-full h-full justify-center items-center px-10 md:px-20 mt-10 gap-3">
-          <p className="text-2xl md:max-w-lg md:text-5xl text-[#FFF] font-(family-name:--font-oleo) text-center capitalize">
+        <div className="absolute inset-0 bg-black/40"></div> 
+        <div className="absolute flex flex-col w-full h-full justify-center items-center px-10 md:px-20 gap-3">
+          <p className="text-4xl md:max-w-lg md:text-5xl text-[#FFF] font-medium font-(family-name:--font-quattrocento) text-center capitalize">
             About Us
           </p>
         </div>
       </div>
       <About />
       <div className="flex flex-col items-center justify-center gap-8 my-14">
-        <p className="text-[#0071B3] text-[30px]  font-semi-bold font-(family-name:--font-oleo)">
+        <p className="text-[#0071B3] text-[30px]  font-semibold font-(family-name:--font-quattrocento)">
           Our mission, vision, and values
         </p>
         <div className="grid grid-cols-1 md:grid-cols-2 items-center justify-center gap-5 px-5 md:px-0 md:gap-10">

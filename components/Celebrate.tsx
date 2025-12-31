@@ -13,7 +13,9 @@ const Celebrate = () => {
           </p>
           <div>
             <Link href={"/contact"}>
-              <Button className="bg-[#0071B3] font-normal text-white text-base md:text-xl cursor-pointer">
+              <Button className="bg-[#0071B3] text-white text-base md:text-xl cursor-pointer transition-all duration-300 ease-out
+    hover:scale-105 hover:bg-[#005f99]
+    active:scale-95">
                 Contact Us
               </Button>
             </Link>

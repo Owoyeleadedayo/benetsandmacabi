@@ -8,6 +8,8 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 
 import Image from "next/image";
+import { Button } from "./ui/button";
+import Link from "next/link";
 
 export default function OurServices() {
   return (
@@ -30,17 +32,11 @@ export default function OurServices() {
           }}
         >
           <SwiperSlide>
-            <ServiceCard
-              image="/img/about.jpeg"
-              title="Event Management"
-            />
+            <ServiceCard image="/img/about.jpeg" title="Event Management" />
           </SwiperSlide>
 
           <SwiperSlide>
-            <ServiceCard
-              image="/img/serve.jpg"
-              title="Concept Development"
-            />
+            <ServiceCard image="/img/serve.jpg" title="Concept Development" />
           </SwiperSlide>
 
           <SwiperSlide>
@@ -69,11 +65,14 @@ function ServiceCard({ image, title }: any) {
         </p>
       )}
 
-      <button className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 px-6 py-3 bg-[#0071B3] text-white font-medium rounded-md opacity-0 group-hover:opacity-100 transition-all duration-300 z-30">
-        Explore
-      </button>
+      <Link href={"/services"}>
+        <Button
+          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 px-6 py-3 bg-[#0071B3] text-white font-medium rounded-md opacity-0 group-hover:opacity-100 transition-all duration-300 ease-out text-sm md:text-base cursor-pointer z-30 hover:scale-105 hover:bg-[#005f99]
+    active:scale-95"
+        >
+          Explore
+        </Button>
+      </Link>
     </div>
   );
 }
-
-

@@ -13,9 +13,9 @@ const Navbar = () => {
 
   const navPages = [
     { link: "/", name: "Home" },
+    { link: "/about", name: "About Us" },
     { link: "/projects", name: "Projects" },
     { link: "/services", name: "Services" },
-    { link: "/about", name: "About Us" },
     { link: "/contact", name: "Contact Us" },
   ];
 

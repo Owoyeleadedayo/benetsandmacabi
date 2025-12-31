@@ -6,7 +6,7 @@ import { Textarea } from "./ui/textarea";
 const ContactForm = () => {
   return (
     <div className="flex flex-col items-center bg-[#EBEBEB] gap-4 lg:gap-6 py-16">
-      <h1 className="text-[#0071B3] text-[30px] pb-3 font-semi-bold font-(family-name:--font-oleo)">
+      <h1 className="text-[#0071B3] text-[30px] pb-3 font-semibold font-(family-name:--font-quattrocento)">
         Contact Form
       </h1>
       <form className="w-full max-w-5xl mx-auto grid grid-cols-1 gap-4 lg:gap-6 px-5">

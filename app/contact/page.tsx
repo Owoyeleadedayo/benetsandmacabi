@@ -9,8 +9,8 @@ const page = () => {
     <>
       <div className="flex relative min-h-[50vh] md:h-125 bg-[url('/img/con.jpg')] bg-no-repeat bg-cover bg-center">
         <div className="absolute inset-0 bg-black/40"></div>
-        <div className="absolute flex flex-col w-full h-full justify-center items-center px-10 md:px-20 mt-10 gap-3">
-          <p className="text-2xl md:max-w-lg md:text-5xl text-[#FFF] font-(family-name:--font-oleo) text-center capitalize">
+        <div className="absolute flex flex-col w-full h-full justify-center items-center px-10 md:px-20 gap-3">
+          <p className="text-2xl md:max-w-lg md:text-5xl text-[#FFF] font-medium font-(family-name:--font-quattrocento) text-center capitalize">
             Contact Us
           </p>
         </div>

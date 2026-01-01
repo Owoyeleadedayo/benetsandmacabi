@@ -4,10 +4,9 @@ import React from "react";
 const ProjectsContent = () => {
   return (
     <div className="flex flex-col bg-[#EBEBEB]">
-
-      <div className="flex flex-col pb-20 px-5 md:px-20 gap-8">
+      <div className="flex flex-col pb-20 px-5 md:px-10 lg:px-20 gap-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 w-full gap-10 ">
-          <div className="relative w-full md:w-150 h-100 md:h-162.5">
+          <div className="relative w-full h-100 md:h-162.5">
             <Image
               src="/img/pro1.jpg"
               alt="display"
@@ -55,7 +54,7 @@ const ProjectsContent = () => {
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
-          <div className="relative w-full md:w-150 h-85">
+          <div className="relative w-full h-85">
             <Image
               src="/img/pro11.jpg"
               alt="display"
@@ -63,7 +62,7 @@ const ProjectsContent = () => {
               className="object-cover"
             />
           </div>
-          <div className="relative w-full md:w-150 h-85">
+          <div className="relative w-full h-85">
             <Image
               src="/img/pro12.jpg"
               alt="display"
@@ -71,7 +70,7 @@ const ProjectsContent = () => {
               className="object-cover"
             />
           </div>
-          <div className="relative w-full md:w-150 h-85">
+          <div className="relative w-full h-85">
             <Image
               src="/img/pro13.jpg"
               alt="display"
@@ -79,7 +78,7 @@ const ProjectsContent = () => {
               className="object-cover"
             />
           </div>
-          <div className="relative w-full md:w-150 h-85">
+          <div className="relative w-full h-85">
             <Image
               src="/img/pro14.jpg"
               alt="display"
@@ -90,7 +89,7 @@ const ProjectsContent = () => {
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 w-full gap-10 ">
-          <div className="relative w-full md:w-150 h-100 md:h-162.5">
+          <div className="relative w-full h-100 md:h-162.5">
             <Image
               src="/img/pro24.jpg"
               alt="display"
@@ -139,7 +138,7 @@ const ProjectsContent = () => {
 
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
-          <div className="relative w-full md:w-150 h-85">
+          <div className="relative w-full h-85">
             <Image
               src="/img/banner1.jpg"
               alt="display"
@@ -147,7 +146,7 @@ const ProjectsContent = () => {
               className="object-cover"
             />
           </div>
-          <div className="relative w-full md:w-150 h-85">
+          <div className="relative w-full  h-85">
             <Image
               src="/img/serr.jpg"
               alt="display"
@@ -155,7 +154,7 @@ const ProjectsContent = () => {
               className="object-cover"
             />
           </div>
-          <div className="relative w-full md:w-150 h-85">
+          <div className="relative w-full h-85">
             <Image
               src="/img/abb.jpeg"
               alt="display"
@@ -163,7 +162,7 @@ const ProjectsContent = () => {
               className="object-cover"
             />
           </div>
-          <div className="relative w-full md:w-150 h-85">
+          <div className="relative w-full h-85">
             <Image
               src="/img/abbs.jpg"
               alt="display"
@@ -174,7 +173,7 @@ const ProjectsContent = () => {
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 w-full gap-10 ">
-          <div className="relative w-full md:w-150 h-100 md:h-162.5">
+          <div className="relative w-full h-100 md:h-162.5">
             <Image
               src="/img/pro35.jpeg"
               alt="display"

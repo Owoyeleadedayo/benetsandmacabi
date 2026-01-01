@@ -19,11 +19,11 @@ const page = () => {
           </motion.p>
         </div>
       </div>
-      <div className="flex flex-col items-center bg-[#EBEBEB] gap-6 py-16">
+      <div className="flex flex-col items-center bg-[#EBEBEB] gap-6 pt-16 pb-8">
         <h1 className="text-[#0071B3] text-[30px]  font-semibold font-(family-name:--font-quattrocento)">
           Projects
         </h1>
-        <p className="flex w-full px-5 md:px-20 text-md font-normal text-black ">
+        <p className="flex w-full px-5 md:px-10 lg:px-20 text-md font-normal text-black">
           We specialize in creating experiences that go beyond expectations.
           From corporate and specialized events — such as conferences, product
           launches, AGMs, fashion shows, and end-of-year parties — to social

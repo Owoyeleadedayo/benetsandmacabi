@@ -5,21 +5,20 @@ import Link from "next/link";
 import { Button } from "./ui/button";
 import { motion } from "framer-motion";
 
-const imagesSet1 = [
+const imagesSet = [
   "/img/f4.jpg",
   "/img/f2.jpg",
   "/img/f6.jpg",
   "/img/serve.jpg",
   "/img/f11.jpg",
-];
-
-const imagesSet2 = [
   "/img/f9.jpg",
   "/img/f6.jpg",
   "/img/f8.jpg",
   "/img/f7.jpg",
   "/img/f12.jpg",
 ];
+
+  
 
 const ImageItem = ({ src }: { src: string }) => (
   <div className="relative w-100 md:w-150 h-70 md:h-100 shrink-0">
@@ -43,11 +42,10 @@ const Projects = () => {
             duration: 30,
             ease: "linear",
           }}
-          drag="x"
           dragConstraints={{ left: -2000, right: 1000 }}
         >
-          {[imagesSet1, imagesSet2].flatMap((set, index) =>
-            [...set, ...set].map((src, idx) => (
+          {[imagesSet].flatMap((set, index) =>
+            [...set].map((src, idx) => (
               <ImageItem key={`${index}-${idx}`} src={src} />
             ))
           )}

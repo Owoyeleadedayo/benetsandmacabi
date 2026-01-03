@@ -38,7 +38,7 @@ const page = () => {
     <>
       <div className="flex relative min-h-[50vh] md:h-[85vh] bg-[url('/img/team.jpg')] bg-no-repeat bg-cover bg-center">
         <div className="absolute inset-0 bg-black/40"></div>
-        <div className="absolute flex flex-col w-full h-full justify-center items-center px-10 md:px-20 mt-10 gap-3">
+        <div className="absolute flex flex-col w-full h-full justify-center items-center px-10 md:px-20 gap-3">
           <motion.p initial={{ opacity: 0, y: 0 }}
             animate={{ opacity: 1, y: 40 }}
             transition={{ duration: 0.8, ease: "easeOut" }}  className="text-2xl md:max-w-lg md:text-6xl text-[#FFF] font-(family-name:--font-quattrocento) text-center capitalize">
@@ -47,8 +47,8 @@ const page = () => {
         </div>
       </div>
       <JoinOurTeam />
-      <div className="flex flex-col pb-14 px-14 gap-6">
-        <p className="text-[#0071B3] text-[40px] font-semi-bold font-(family-name:--font-quattrocento)">
+      <div className="flex flex-col pb-14 px-5 md:px-14 gap-6">
+        <p className="text-[#0071B3] text-[30px] md:text-[40px] font-semi-bold font-(family-name:--font-quattrocento)">
           Explore Opportunities
         </p>
         <div className="flex flex-col px-5 gap-4">

@@ -5,7 +5,7 @@ const JoinOurTeam = () => {
     <>
       <div className="flex w-full items-center justify-center my-20">
         <div className="flex flex-col max-w-100 md:max-w-xl bg-[#EBEBEB] py-5 px-6 rounded-md gap-3 z-3 mr-0 md:-mr-10 shadow-md">
-          <p className="text-[#0071B3] text-[30px] font-semi-bold font-(family-name:--font-oleo)">
+          <p className="text-[#0071B3] text-[30px] font-semi-bold font-(family-name:--font-quattrocento)">
             Join Our Team
           </p>
            <p className="text-black font-medium">  Be part of creativity, excellence & unforgettable experiences.</p>

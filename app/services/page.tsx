@@ -20,19 +20,19 @@ const page = () => {
     {
       id: 2,
       title: "Event Management",
-      img: "/img/bv.jpg",
+      img: "/img/em.jpeg",
       desc: "The seamless transition of your event from the idea stage to reality. We help establish the nature of your event, profile and book professional vendors, establish timelines & deadlines as well as implement on-the-day.",
     },
     {
       id: 3,
       title: "Venue Design",
-      img: "/img/serve.jpg",
+      img: "/img/vd.jpg",
       desc: "The venue ambience is the first impression guests get on arrival, and the first impression they say last longer. Having this in mind, our experts consistently design every venue for a subtle, breath taking and apposite ambiance.",
     },
     {
       id: 4,
       title: "Branding & Digital Visibility",
-      img: "/img/por.jpg",
+      img: "/img/services.jpg",
       desc: "We utilize both print & electronic tools in delivering our project objectives; LED screens, interactive media tools, visual display and digital banner, print and electronic media etc.",
     },
   ];

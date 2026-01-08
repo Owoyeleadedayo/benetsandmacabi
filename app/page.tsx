@@ -12,7 +12,7 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 
 export default function Home() {
-  const banners = ["/img/banner1.jpg", "/img/banner2.jpg", "/img/banner3.jpg"];
+  const banners = ["/img/banner1.jpg", "/img/hp1.jpeg", "/img/banner3.jpg"];
   
   return (
     <>

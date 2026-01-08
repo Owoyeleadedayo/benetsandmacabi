@@ -11,10 +11,10 @@ const Footer = () => {
           <Link href={"/"} className="flex justify-start items-start">
             <div className="relative  w-50 h-17.5">
               <Image
-                src="/img/logo.png"
+                src="/img/M&BLogo.png"
                 alt="logo"
                 fill
-                className="object-contain border cursor-pointer"
+                className="object-contain cursor-pointer"
               />
             </div>
           </Link>
@@ -84,24 +84,24 @@ const Footer = () => {
         </div>
         <div className="col-span-2 flex flex-col gap-4 ml-0 xl:ml-20">
           <p className="text-white text-lg font-medium">Instagram</p>
-          <div className="grid grid-cols-3 gap">
-            <div className="relative w-28.75 h-21.25">
-                <Image src="/img/f2.jpg" alt="footer" fill className="object-contain rounded-md" />
+          <div className="grid grid-cols-3 gap-2">
+            <div className="relative w-full h-21.25">
+                <Image src="/img/f2.jpg" alt="footer" fill className="object-cover" />
             </div>
-            <div className="relative w-28.75 h-21.25">
-                <Image src="/img/f4.jpg" alt="footer" fill className="object-contain rounded-md" />
+            <div className="relative w-full h-21.25">
+                <Image src="/img/f4.jpg" alt="footer" fill className="object-cover" />
             </div>
-            <div className="relative w-28.75 h-21.25">
-                <Image src="/img/f1.jpg" alt="footer" fill className="object-contain rounded-md" />
+            <div className="relative w-full h-21.25">
+                <Image src="/img/f1.jpg" alt="footer" fill className="object-cover" />
             </div>
-            <div className="relative w-28.75 h-21.25">
-                <Image src="/img/f5.jpg" alt="footer" fill className="object-cover rounded-md" />
+            <div className="relative w-full h-21.25">
+                <Image src="/img/f5.jpg" alt="footer" fill className="object-cover d" />
             </div>
-            <div className="relative w-28.75 h-21.25">
-                <Image src="/img/team.jpg" alt="footer" fill className="object-contain rounded-md" />
+            <div className="relative w-full h-21.25">
+                <Image src="/img/team.jpg" alt="footer" fill className="object-cover" />
             </div>
-            <div className="relative w-28.75 h-21.25">
-                <Image src="/img/f3.jpg" alt="footer" fill className="object-contain rounded-md" />
+            <div className="relative w-full h-21.25">
+                <Image src="/img/f3.jpg" alt="footer" fill className="object-cover" />
             </div>
           </div>
         </div>

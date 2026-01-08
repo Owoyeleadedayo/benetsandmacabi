@@ -28,7 +28,7 @@ const Navbar = () => {
             src="/img/Logo1.png"
             alt="logo"
             height={50}
-            width={50}
+            width={80}
             className="cursor-pointer"
           />
         </Link>

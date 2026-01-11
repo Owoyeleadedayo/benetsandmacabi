@@ -6,10 +6,11 @@ import { Button } from "./ui/button";
 import { motion } from "framer-motion";
 
 const imagesSet = [
-  "/img/f4.jpg",
+  "/img/hoop.jpeg",
   "/img/f2.jpg",
   "/img/f6.jpg",
   "/img/serve.jpg",
+  "/img/f4.jpg",
   "/img/f11.jpg",
   "/img/f9.jpg",
   "/img/f6.jpg",

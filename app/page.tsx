@@ -12,7 +12,7 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 
 export default function Home() {
-  const banners = ["/img/banner1.jpg", "/img/hp1.jpeg", "/img/banner3.jpg"];
+  const banners = ["/img/banner1.jpg", "/img/hp1.jpeg", "/img/hp2.jpg"];
   
   return (
     <>
@@ -26,7 +26,7 @@ export default function Home() {
           {banners.map((img, index) => (
             <div key={index}>
               <div
-                className="relative min-h-[60vh] md:min-h-[85vh] bg-no-repeat bg-cover bg-center"
+                className="relative min-h-[70vh] md:min-h-[85vh] bg-no-repeat bg-cover bg-center"
                 style={{ backgroundImage: `url(${img})` }}
               >
                 <div className="absolute inset-0 bg-black/60"></div>

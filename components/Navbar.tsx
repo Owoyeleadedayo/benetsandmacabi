@@ -25,7 +25,7 @@ const Navbar = () => {
       <div className="flex items-center justify-between px-6 md:px-14 py-2">
         <Link href="/">
           <Image
-            src="/img/Logo-11.png"
+            src="/img/Logo-10.png"
             alt="logo"
             height={80}
             width={120}
@@ -39,8 +39,8 @@ const Navbar = () => {
             return (
               <Link key={page.name} href={page.link}>
                 <span
-                  className={`font-semibold text-lg transition-colors ${
-                    isActive ? "text-blue-500" : "text-white"
+                  className={`font-semibold text-lg transition-colors hover:text-white ${
+                    isActive ? "text-white"  :"text-blue-500"
                   }`}
                 >
                   {page.name}

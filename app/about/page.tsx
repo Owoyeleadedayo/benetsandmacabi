@@ -14,7 +14,7 @@ import { motion } from "framer-motion";
 const page = () => {
   return (
     <>
-      <div className="flex relative min-h-[50vh] md:h-[85vh] bg-[url('/img/abbs.jpg')] bg-no-repeat bg-cover bg-center">
+      <div className="flex relative min-h-[50vh] md:h-[85vh] bg-[url('/img/pooll.jpeg')] bg-no-repeat bg-cover bg-center">
         <div className="absolute inset-0 bg-black/50"></div>
         <div className="absolute flex flex-col w-full h-full justify-center items-center px-10 md:px-20 gap-3">
           <motion.p

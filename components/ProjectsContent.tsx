@@ -1,8 +1,39 @@
 import Image from "next/image";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import ImageModal from "./ImageModal";
 
 const ProjectsContent = () => {
+  const iframeRef = useRef<HTMLIFrameElement | null>(null);
+
+  useEffect(() => {
+    // Load YouTube API
+    const tag = document.createElement("script");
+    tag.src = "https://www.youtube.com/iframe_api";
+    document.body.appendChild(tag);
+
+    let player: any;
+
+    (window as any).onYouTubeIframeAPIReady = () => {
+      player = new (window as any).YT.Player(iframeRef.current, {
+        events: {},
+      });
+    };
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (!entry.isIntersecting && player) {
+          player.pauseVideo(); 
+        }
+      },
+      { threshold: 0.4 }
+    );
+
+    if (iframeRef.current) {
+      observer.observe(iframeRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, []);
   const [activeImage, setActiveImage] = useState<string | null>(null);
   return (
     <div className="flex flex-col bg-[#EBEBEB]">
@@ -362,6 +393,19 @@ const ProjectsContent = () => {
           </div>
         </div>
       </div>
+
+      <section className="relative w-full h-[40vh] md:h-screen overflow-hidden">
+      <iframe
+        ref={iframeRef}
+        className="absolute top-0 left-0 w-full h-full"
+        src="https://www.youtube.com/embed/bkC8gM6AVLM?enablejsapi=1&controls=1&modestbranding=1"
+        title="YouTube video player"
+        allow="fullscreen"
+        allowFullScreen
+      />
+
+      <div className="absolute inset-0 bg-black/30 pointer-events-none"></div>
+    </section>
     </div>
   );
 };

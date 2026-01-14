@@ -28,7 +28,7 @@ const About = () => {
       </div>
       <div className="relative hidden md:block h-137.5 w-125">
         <Image
-          src="/img/about.jpeg"
+          src="/img/pro23.jpg"
           alt="display"
           fill
           className="object-cover"

@@ -26,7 +26,7 @@ export default function Home() {
           {banners.map((img, index) => (
             <div key={index}>
               <div
-                className="relative min-h-[70vh] md:min-h-[85vh] bg-no-repeat bg-cover bg-center"
+                className="relative min-h-[70vh] md:min-h-[85vh] bg-no-repeat bg-cover bg-fixed bg-center"
                 style={{ backgroundImage: `url(${img})` }}
               >
                 <div className="absolute inset-0 bg-black/60"></div>

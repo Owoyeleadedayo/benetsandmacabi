@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { Button } from "./ui/button";
 
 const AboutUs = () => {
@@ -16,15 +17,24 @@ const AboutUs = () => {
             appreciate class, creativity, and quality event solutions.
           </p>
           <div className="mt-2">
-            <Button className="bg-[#0071B3] text-white text-sm md:text-base cursor-pointer transition-all duration-300 ease-out
+            <Link href={"/about"}>
+              <Button
+                className="bg-[#0071B3] text-white text-sm md:text-base cursor-pointer transition-all duration-300 ease-out
     hover:scale-105 hover:bg-[#005f99]
-    active:scale-95">
-              Discover More
-            </Button>
+    active:scale-95"
+              >
+                Discover More
+              </Button>
+            </Link>
           </div>
         </div>
         <div className="relative hidden md:block h-125 w-125">
-          <Image src="/img/pro23.jpg" alt="display" fill className="object-cover" />
+          <Image
+            src="/img/pro23.jpg"
+            alt="display"
+            fill
+            className="object-cover"
+          />
         </div>
       </div>
     </>

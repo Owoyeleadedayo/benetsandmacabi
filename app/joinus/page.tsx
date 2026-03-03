@@ -1,74 +1,67 @@
-"use client"
-import Celebrate from "@/components/Celebrate";
-import JoinOurTeam from "@/components/JoinOurTeam";
-import Newsletter from "@/components/Newsletter";
-import { Button } from "@/components/ui/button";
-import { motion } from "framer-motion";
+import JoinusHero from "@/components/JoinusHero";
+import { Metadata } from "next";
 
+export const metadata: Metadata = {
+  title: {
+    default: "Makabis and Benet | Luxury Event Decorators in Nigeria",
+    template: "%s | Makabis and Benet",
+  },
+  description:
+    "Makabis and Benet is a premium event decoration company in Nigeria specializing in weddings, corporate events, birthdays, and luxury celebrations. We create stylish, elegant, and unforgettable event experiences.",
+
+  keywords: [
+    "event decorator in Nigeria",
+    "event planner in Lagos",
+    "wedding decoration Nigeria",
+    "luxury event styling",
+    "corporate event decoration",
+    "birthday party decoration",
+    "Makabis and Benet",
+    "event styling company",
+  ],
+
+  authors: [{ name: "Makabis and Benet" }],
+  creator: "Makabis and Benet",
+  publisher: "Makabis and Benet",
+
+  openGraph: {
+    title: "Makabis and Benet | Luxury Event Decorators in Nigeria",
+    description:
+      "We design and deliver creative, stylish, and elegant event decorations for weddings, corporate events, and special celebrations across Nigeria.",
+    url: "https://makabisandbenet.com/joinus",
+    siteName: "Makabis and Benet",
+    locale: "en_NG",
+    type: "website",
+  },
+
+  twitter: {
+    card: "summary_large_image",
+    title: "Makabis and Benet | Luxury Event Decorators",
+    description:
+      "Premium event decoration services in Nigeria for weddings, corporate events, and luxury celebrations.",
+  },
+
+  robots: {
+    index: true,
+    follow: true,
+    nocache: false,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-snippet": -1,
+      "max-image-preview": "large",
+      "max-video-preview": -1
+    },
+  },
+  alternates: {
+    canonical: "https://makabisandbenet.com/joinus"
+  }
+};
 
 const page = () => {
-    const experience = [
-        {
-            id: 1,
-            title: "Hosts & Hostesses",
-            desc: "Deliver great guest experiences with style and professionalism."
-        },
-        {
-            id: 2,
-            title: "Event Coordinators",
-            desc: "Support flawless event execution and logistics."
-        }, 
-        {
-            id: 3,
-            title: "Trainees / Interns",
-            desc: "Learn, grow, and build a career in the event industry."
-        },
-        {
-            id: 4,
-            title: "Experienced Event Managers",
-            desc: "Lead projects and deliver premium event solutions."
-        },
-        {
-            id: 5,
-            title: "Artisans / Decor Crew",
-            desc: "Bring designs to life with skill and precision."
-        }
-    ]
   return (
     <>
-      <div className="flex relative min-h-[50vh] md:h-[85vh] bg-[url('/img/jott.jpg')] bg-no-repeat bg-cover bg-fixed bg-center">
-        <div className="absolute inset-0 bg-black/40"></div>
-        <div className="absolute flex flex-col w-full h-full justify-center items-center px-10 md:px-20 gap-3">
-          <motion.p initial={{ opacity: 0, y: 0 }}
-            animate={{ opacity: 1, y: 40 }}
-            transition={{ duration: 0.8, ease: "easeOut" }}  className="text-2xl md:max-w-lg md:text-6xl text-[#FFF] font-(family-name:--font-quattrocento) text-center capitalize">
-            Join Our Team
-          </motion.p>
-        </div>
-      </div>
-      <JoinOurTeam />
-      <div className="flex flex-col pb-14 px-5 md:px-14 gap-6">
-        <p className="text-[#0071B3] text-[30px] md:text-[40px] font-semi-bold font-(family-name:--font-quattrocento)">
-          Explore Opportunities
-        </p>
-        <div className="flex flex-col px-5 gap-4">
-          {experience.map((exp) => (
-            <ul key={exp.id} className="list-disc">
-            <li className="text-lg font-semibold text-black">{exp.title}</li>
-            <p className="text-lg font-light text-black">{exp.desc}</p>
-          </ul>
-          ))}
-        </div>
-        <div className="flex">
-            <p className="font-semibold text-lg text-black leading-6">Ready to shape unforgettable experiences? <br /> Join Makabis & Benet today.</p>
-        </div>
-
-        <div>
-            <Button className="bg-[#0071B3] text-white text-base font-bold">Apply Now</Button>
-        </div>
-      </div>
-      <Newsletter />
-      <Celebrate />
+      <JoinusHero />
     </>
   );
 };

@@ -1,101 +1,67 @@
-"use client";
+import AboutHero from "@/components/AboutHero";
+import { Metadata } from "next";
 
-import About from "@/components/About";
-import Celebrate from "@/components/Celebrate";
-import Newsletter from "@/components/Newsletter";
-import OurClients from "@/components/OurClients";
-import OurServices from "@/components/OurServices";
-import Projects from "@/components/Projects";
-import Testimonials from "@/components/Testimonials";
-import Image from "next/image";
-import Link from "next/link";
-import { motion } from "framer-motion";
+export const metadata: Metadata = {
+  title: {
+    default: "Makabis and Benet | Luxury Event Decorators in Nigeria",
+    template: "%s | Makabis and Benet",
+  },
+  description:
+    "Makabis and Benet is a premium event decoration company in Nigeria specializing in weddings, corporate events, birthdays, and luxury celebrations. We create stylish, elegant, and unforgettable event experiences.",
+
+  keywords: [
+    "event decorator in Nigeria",
+    "event planner in Lagos",
+    "wedding decoration Nigeria",
+    "luxury event styling",
+    "corporate event decoration",
+    "birthday party decoration",
+    "Makabis and Benet",
+    "event styling company",
+  ],
+
+  authors: [{ name: "Makabis and Benet" }],
+  creator: "Makabis and Benet",
+  publisher: "Makabis and Benet",
+
+  openGraph: {
+    title: "Makabis and Benet | Luxury Event Decorators in Nigeria",
+    description:
+      "We design and deliver creative, stylish, and elegant event decorations for weddings, corporate events, and special celebrations across Nigeria.",
+    url: "https://makabisandbenet.com/about",
+    siteName: "Makabis and Benet",
+    locale: "en_NG",
+    type: "website",
+  },
+
+  twitter: {
+    card: "summary_large_image",
+    title: "Makabis and Benet | Luxury Event Decorators",
+    description:
+      "Premium event decoration services in Nigeria for weddings, corporate events, and luxury celebrations.",
+  },
+
+  robots: {
+    index: true,
+    follow: true,
+    nocache: false,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-snippet": -1,
+      "max-image-preview": "large",
+      "max-video-preview": -1
+    },
+  },
+  alternates: {
+    canonical: "https://makabisandbenet.com/about"
+  }
+};
 
 const page = () => {
   return (
     <>
-      <div className="flex relative min-h-[50vh] md:h-[85vh] bg-[url('/img/pooll.jpeg')] bg-no-repeat bg-cover bg-fixed bg-center">
-        <div className="absolute inset-0 bg-black/50"></div>
-        <div className="absolute flex flex-col w-full h-full justify-center items-center px-10 md:px-20 gap-3">
-          <motion.p
-            initial={{ opacity: 0, y: 0 }}
-            animate={{ opacity: 1, y: 40 }}
-            transition={{ duration: 0.8, ease: "easeOut" }}
-            className="text-4xl md:max-w-lg md:text-6xl text-[#FFF] font-medium font-(family-name:--font-quattrocento) text-center capitalize"
-          >
-            About Us
-          </motion.p>
-        </div>
-      </div>
-      <About />
-      <div className="flex flex-col items-center justify-center gap-6 md:gap-8 my-14">
-        <p className="text-[#0071B3] text-[26px] md:text-[30px] font-semibold font-(family-name:--font-quattrocento)">
-          Our mission, vision, and values
-        </p>
-        <div className="grid grid-cols-1 md:grid-cols-2 items-center justify-center gap-5 px-5 md:px-0 md:gap-10">
-          <div className="flex items-center gap-5">
-            <div className="relative h-25 w-25">
-              <Image
-                src="/img/mis.png"
-                alt="display"
-                fill
-                className="object-contain rounded-md"
-              />
-            </div>
-            <p className="max-w-md text-md text-black font-medium">
-              To consistently develop creative and beautiful event models to
-              meet our clients' ever evolving needs.
-            </p>
-          </div>
-
-          <div className="flex items-center gap-5">
-            <div className="relative h-25 w-25">
-              <Image
-                src="/img/msss.png"
-                alt="display"
-                fill
-                className="object-contain rounded-md"
-              />
-            </div>
-            <p className="max-w-md text-md text-black font-medium">
-              To be the most preferred ideation hub and accessible producer for
-              today’s audience who desire style, class, and creative event
-              solutions.
-            </p>
-          </div>
-
-          <div className="col-span-1 md:col-span-2 flex items-center justify-center gap-5">
-            <div className="relative h-25 w-25">
-              <Image
-                src="/img/bino.png"
-                alt="display"
-                fill
-                className="object-contain rounded-md"
-              />
-            </div>
-            <p className="max-w-md text-md text-black font-medium">
-              Professionalism, integrity, empathy, and excellence
-            </p>
-          </div>
-        </div>
-      </div>
-      <OurServices />
-      <Projects />
-      <OurClients />
-      <div className="flex w-full py-5 md:py-10 px-5 md:px-0  items-center justify-center">
-        <p className="font-semibold text-center text-lg md:text-2xl text-black">
-          Want to be part of our creative team?{" "}
-          <Link
-            href={"/joinus"}
-            className="text-[#0071B3] cursor-pointer hover:text-[#134a67]"
-          >
-            Join Our Team
-          </Link>{" "}
-        </p>
-      </div>
-      <Testimonials />
-      <Newsletter />
-      <Celebrate />
+      <AboutHero />
     </>
   );
 };

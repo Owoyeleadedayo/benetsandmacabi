@@ -1,0 +1,71 @@
+"use client"
+import Celebrate from "@/components/Celebrate";
+import ContactForm from "@/components/ContactForm";
+import Newsletter from "@/components/Newsletter";
+import { MailOpen, MapPin, Smartphone } from "lucide-react";
+import { motion } from "framer-motion";
+
+const ContactPage = () => {
+  return (
+    <>
+    <div className="flex relative min-h-[50vh] md:h-[85vh] bg-[url('/img/con.jpeg')] bg-no-repeat bg-cover bg-fixed bg-center">
+      <div className="absolute inset-0 bg-black/40"></div>
+      <div className="absolute flex flex-col w-full h-full justify-center items-center px-10 md:px-20 gap-3">
+        <motion.p initial={{ opacity: 0, y: 0 }}
+          animate={{ opacity: 1, y: 40 }}
+          transition={{ duration: 0.8, ease: "easeOut" }} className="text-2xl md:max-w-lg md:text-5xl text-[#FFF] font-medium font-(family-name:--font-quattrocento) text-center capitalize">
+          Contact Us
+        </motion.p>
+      </div>
+    </div>
+    <div className="grid grid-cols-1 lg:grid-cols-3 items-start lg:items-center justify-start lg:justify-center my-8 lg:my-15 px-5 lg:px-14 gap-5">
+      <div className="flex items-start md:items-center justify-start md:justify-center gap-6">
+        <div className="flex border border-[#E4EBF2] justify-center items-center p-4 rounded-full">
+          <Smartphone size={30} className="text-[#0071B3]" />
+        </div>
+        <div className="flex flex-col gap">
+          <p className="text-base text-black font-medium">014542856</p>
+          <p className="text-base text-black font-medium">
+            +234 808 477 8525
+          </p>
+          <p className="text-base text-black font-medium">
+            +234 806 639 4363
+          </p>
+        </div>
+      </div>
+      <div className="flex items-start md:items-center justify-start md:justify-center gap-6">
+        <div className="flex border border-[#E4EBF2] justify-center items-center p-4 rounded-full">
+          <MapPin size={30} className="text-[#0071B3]" />
+        </div>
+        <div className="flex flex-col gap">
+          <p className="text-base text-black font-medium">
+            6, Gbajobi Street off Balogun
+          </p>
+          <p className="text-base text-black font-medium">
+            Street, Ikeja Lagos,
+          </p>
+          <p className="text-base text-black font-medium">23401, Nigeria </p>
+        </div>
+      </div>
+      <div className="flex items-start md:items-center justify-start md:justify-center gap-6">
+        <div className="flex border border-[#E4EBF2] justify-center items-center p-4 rounded-full">
+          <MailOpen size={30} className="text-[#0071B3]" />
+        </div>
+        <div className="flex flex-col gap">
+          <p className="text-base text-black font-medium">
+            info@makabisandbanet.com
+          </p>
+          <p className="text-base text-black font-medium">
+            makabisandbanet@gmail.com
+          </p>
+        </div>
+      </div>
+    </div>
+    <ContactForm />
+    <Newsletter />
+    <Celebrate />
+  </>
+  )
+}
+
+export default ContactPage

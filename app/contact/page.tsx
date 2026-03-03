@@ -1,70 +1,68 @@
-"use client"
-import Celebrate from "@/components/Celebrate";
-import ContactForm from "@/components/ContactForm";
-import Newsletter from "@/components/Newsletter";
-import { MailOpen, MapPin, Smartphone } from "lucide-react";
-import { motion } from "framer-motion";
+import ContactPage from "@/components/ContactPage";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: {
+    default: "Makabis and Benet | Luxury Event Decorators in Nigeria",
+    template: "%s | Makabis and Benet",
+  },
+  description:
+    "Makabis and Benet is a premium event decoration company in Nigeria specializing in weddings, corporate events, birthdays, and luxury celebrations. We create stylish, elegant, and unforgettable event experiences.",
+
+  keywords: [
+    "event decorator in Nigeria",
+    "event planner in Lagos",
+    "wedding decoration Nigeria",
+    "luxury event styling",
+    "corporate event decoration",
+    "birthday party decoration",
+    "Makabis and Benet",
+    "event styling company",
+  ],
+
+  authors: [{ name: "Makabis and Benet" }],
+  creator: "Makabis and Benet",
+  publisher: "Makabis and Benet",
+
+  openGraph: {
+    title: "Makabis and Benet | Luxury Event Decorators in Nigeria",
+    description:
+      "We design and deliver creative, stylish, and elegant event decorations for weddings, corporate events, and special celebrations across Nigeria.",
+    url: "https://makabisandbenet.com/contact",
+    siteName: "Makabis and Benet",
+    locale: "en_NG",
+    type: "website",
+  },
+
+  twitter: {
+    card: "summary_large_image",
+    title: "Makabis and Benet | Luxury Event Decorators",
+    description:
+      "Premium event decoration services in Nigeria for weddings, corporate events, and luxury celebrations.",
+  },
+
+  robots: {
+    index: true,
+    follow: true,
+    nocache: false,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-snippet": -1,
+      "max-image-preview": "large",
+      "max-video-preview": -1
+    },
+  },
+  alternates: {
+    canonical: "https://makabisandbenet.com/contact"
+  }
+};
 
 const page = () => {
   return (
-    <>
-      <div className="flex relative min-h-[50vh] md:h-[85vh] bg-[url('/img/con.jpeg')] bg-no-repeat bg-cover bg-fixed bg-center">
-        <div className="absolute inset-0 bg-black/40"></div>
-        <div className="absolute flex flex-col w-full h-full justify-center items-center px-10 md:px-20 gap-3">
-          <motion.p initial={{ opacity: 0, y: 0 }}
-            animate={{ opacity: 1, y: 40 }}
-            transition={{ duration: 0.8, ease: "easeOut" }} className="text-2xl md:max-w-lg md:text-5xl text-[#FFF] font-medium font-(family-name:--font-quattrocento) text-center capitalize">
-            Contact Us
-          </motion.p>
-        </div>
-      </div>
-      <div className="grid grid-cols-1 lg:grid-cols-3 items-start lg:items-center justify-start lg:justify-center my-8 lg:my-15 px-5 lg:px-14 gap-5">
-        <div className="flex items-start md:items-center justify-start md:justify-center gap-6">
-          <div className="flex border border-[#E4EBF2] justify-center items-center p-4 rounded-full">
-            <Smartphone size={30} className="text-[#0071B3]" />
-          </div>
-          <div className="flex flex-col gap">
-            <p className="text-base text-black font-medium">014542856</p>
-            <p className="text-base text-black font-medium">
-              +234 808 477 8525
-            </p>
-            <p className="text-base text-black font-medium">
-              +234 806 639 4363
-            </p>
-          </div>
-        </div>
-        <div className="flex items-start md:items-center justify-start md:justify-center gap-6">
-          <div className="flex border border-[#E4EBF2] justify-center items-center p-4 rounded-full">
-            <MapPin size={30} className="text-[#0071B3]" />
-          </div>
-          <div className="flex flex-col gap">
-            <p className="text-base text-black font-medium">
-              6, Gbajobi Street off Balogun
-            </p>
-            <p className="text-base text-black font-medium">
-              Street, Ikeja Lagos,
-            </p>
-            <p className="text-base text-black font-medium">23401, Nigeria </p>
-          </div>
-        </div>
-        <div className="flex items-start md:items-center justify-start md:justify-center gap-6">
-          <div className="flex border border-[#E4EBF2] justify-center items-center p-4 rounded-full">
-            <MailOpen size={30} className="text-[#0071B3]" />
-          </div>
-          <div className="flex flex-col gap">
-            <p className="text-base text-black font-medium">
-              info@makabisandbanet.com
-            </p>
-            <p className="text-base text-black font-medium">
-              makabisandbanet@gmail.com
-            </p>
-          </div>
-        </div>
-      </div>
-      <ContactForm />
-      <Newsletter />
-      <Celebrate />
-    </>
+   <>
+    <ContactPage />
+   </>
   );
 };
 

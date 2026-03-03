@@ -15,7 +15,7 @@ const ServicesPage = () => {
         {
           id: 1,
           title: "Concept Development",
-          img: "/img/ser.jpg",
+          img: "/img/con.jpeg",
           desc: "We help you develop unique concepts to adequately meet your events’ objectives. Our versatility, coupled with our attention to the objectives of your event, helps us to consistently achieve impeccable delivery.",
         },
         {

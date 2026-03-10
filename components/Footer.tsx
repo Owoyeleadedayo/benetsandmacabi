@@ -1,4 +1,13 @@
-import { Facebook, Instagram, Mail, MapPin, Phone, Smartphone, Twitter, Youtube } from "lucide-react";
+import {
+  Facebook,
+  Instagram,
+  Mail,
+  MapPin,
+  Phone,
+  Smartphone,
+  Twitter,
+  Youtube,
+} from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
@@ -7,30 +16,51 @@ const Footer = () => {
   return (
     <div className="bg-[#0071B3] w-full flex flex-col gap-6">
       <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-5 justify-center pt-16 md:px-14 px-8 gap-10 md:gap-10 xl:gap-20">
-        <div className="flex flex-col gap-6 "> 
+        <div className="flex flex-col gap-6 ">
           <Link href={"/"} className="flex justify-start items-start">
             <Link href="/">
-          <Image
-            src="/img/Logo-10.png"
-            alt="logo"
-            height={150}
-            width={180}
-            className="cursor-pointer"
-          />
-        </Link>
+              <Image
+                src="/img/Logo-10.png"
+                alt="logo"
+                height={150}
+                width={180}
+                className="cursor-pointer"
+              />
+            </Link>
           </Link>
           <div className="flex gap-2">
             <div className="flex p-2 bg-black rounded-full">
-            <Facebook color="white" />
+              <a
+                href="https://www.facebook.com/share/1YQqP2dYMb/"
+                target="_blank"
+              >
+                <Facebook color="white" />
+              </a>
             </div>
             <div className="flex p-2 bg-black rounded-full">
-            <Twitter color="white" />
+              <Twitter color="white" />
             </div>
             <div className="flex p-2 bg-black rounded-full">
-            <Youtube color="white" />
+              <a
+                href="https://www.instagram.com/impressionsbymakabis?igsh=YmUyaWJhZnV5Nnli"
+                target="_blank"
+              >
+                <Instagram color="white" />
+              </a>
             </div>
             <div className="flex p-2 bg-black rounded-full">
-            <Instagram color="white" />
+              <a href="https://youtube.com/@makabisbenet3196?si=FyfoCiVMaUzx2IFF" target="_blank">
+              <Youtube color="white" />
+              </a>
+              
+            </div>
+            <div className="flex p-2 bg-black rounded-full">
+              <a
+                href="https://www.instagram.com/makabisandbenet?igsh=Y2Fna2xjdTJjZ3Ez"
+                target="_blank"
+              >
+                <Instagram color="white" />
+              </a>
             </div>
           </div>
         </div>
@@ -87,22 +117,52 @@ const Footer = () => {
           <p className="text-white text-lg font-medium">Instagram</p>
           <div className="grid grid-cols-3 gap-2">
             <div className="relative w-full h-21.25">
-                <Image src="/img/f2.jpg" alt="footer" fill className="object-cover" />
+              <Image
+                src="/img/f2.jpg"
+                alt="footer"
+                fill
+                className="object-cover"
+              />
             </div>
             <div className="relative w-full h-21.25">
-                <Image src="/img/f4.jpg" alt="footer" fill className="object-cover" />
+              <Image
+                src="/img/f4.jpg"
+                alt="footer"
+                fill
+                className="object-cover"
+              />
             </div>
             <div className="relative w-full h-21.25">
-                <Image src="/img/f1.jpg" alt="footer" fill className="object-cover" />
+              <Image
+                src="/img/f1.jpg"
+                alt="footer"
+                fill
+                className="object-cover"
+              />
             </div>
             <div className="relative w-full h-21.25">
-                <Image src="/img/f5.jpg" alt="footer" fill className="object-cover d" />
+              <Image
+                src="/img/f5.jpg"
+                alt="footer"
+                fill
+                className="object-cover d"
+              />
             </div>
             <div className="relative w-full h-21.25">
-                <Image src="/img/team.jpg" alt="footer" fill className="object-cover" />
+              <Image
+                src="/img/team.jpg"
+                alt="footer"
+                fill
+                className="object-cover"
+              />
             </div>
             <div className="relative w-full h-21.25">
-                <Image src="/img/f3.jpg" alt="footer" fill className="object-cover" />
+              <Image
+                src="/img/f3.jpg"
+                alt="footer"
+                fill
+                className="object-cover"
+              />
             </div>
           </div>
         </div>

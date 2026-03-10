@@ -27,7 +27,7 @@ const ServicesPage = () => {
         {
           id: 3,
           title: "Venue Design",
-          img: "/img/vd.jpg",
+          img: "/img/venue.jpeg",
           desc: "The venue ambience is the first impression guests get on arrival, and the first impression they say last longer. Having this in mind, our experts consistently design every venue for a subtle, breath taking and apposite ambiance.",
         },
         {

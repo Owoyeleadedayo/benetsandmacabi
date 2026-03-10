@@ -8,7 +8,7 @@ import { motion } from "framer-motion";
 const ContactPage = () => {
   return (
     <>
-    <div className="flex relative min-h-[50vh] md:h-[85vh] bg-[url('/img/con.jpeg')] bg-no-repeat bg-cover bg-fixed bg-center">
+    <div className="flex relative min-h-[50vh] md:h-[85vh] bg-[url('/img/contact.jpeg')] bg-no-repeat bg-cover bg-fixed bg-center">
       <div className="absolute inset-0 bg-black/40"></div>
       <div className="absolute flex flex-col w-full h-full justify-center items-center px-10 md:px-20 gap-3">
         <motion.p initial={{ opacity: 0, y: 0 }}

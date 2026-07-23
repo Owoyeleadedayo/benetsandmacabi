@@ -16,7 +16,7 @@ const Footer = () => {
   return (
     <div className="bg-[#0071B3] w-full flex flex-col gap-6">
       <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-5 justify-center pt-16 md:px-14 px-8 gap-10 md:gap-10 xl:gap-20">
-        <div className="flex flex-col gap-6 ">
+        <div className="flex flex-col gap-2 md:gap-6 ">
           <Link href={"/"} className="flex justify-start items-start">
             <Link href="/">
               <Image
@@ -28,7 +28,7 @@ const Footer = () => {
               />
             </Link>
           </Link>
-          <div className="flex gap-2">
+          <div className="flex gap-1 md:gap-2">
             <div className="flex p-2 bg-black rounded-full">
               <a
                 href="https://www.facebook.com/share/1YQqP2dYMb/"
@@ -49,10 +49,12 @@ const Footer = () => {
               </a>
             </div>
             <div className="flex p-2 bg-black rounded-full">
-              <a href="https://youtube.com/@makabisbenet3196?si=FyfoCiVMaUzx2IFF" target="_blank">
-              <Youtube color="white" />
+              <a
+                href="https://youtube.com/@makabisbenet3196?si=FyfoCiVMaUzx2IFF"
+                target="_blank"
+              >
+                <Youtube color="white" />
               </a>
-              
             </div>
             <div className="flex p-2 bg-black rounded-full">
               <a
@@ -67,11 +69,11 @@ const Footer = () => {
         <div className="flex flex-col gap-4">
           <p className="text-white text-lg font-medium">Quick link</p>
           <div className="flex flex-col gap-2">
-            <p className="text-white text-base font-normal">About Us</p>
-            <p className="text-white text-base font-normal">Projects</p>
-            <p className="text-white text-base font-normal">Contact Us</p>
-            <p className="text-white text-base font-normal">Services</p>
-            <p className="text-white text-base font-normal">Careers</p>
+            <p className="text-white text-sm md:text-base font-normal">About Us</p>
+            <p className="text-white text-sm md:text-base font-normal">Projects</p>
+            <p className="text-white text-sm md:text-base font-normal">Contact Us</p>
+            <p className="text-white text-sm md:text-base font-normal">Services</p>
+            <p className="text-white text-sm md:text-base font-normal">Careers</p>
           </div>
         </div>
         <div className="flex flex-col gap-4">
@@ -81,18 +83,20 @@ const Footer = () => {
               <div>
                 <Mail color="white" />
               </div>
-              <p className="text-white text-base font-normal">
+              <p className="text-white text-sm md:text-base font-normal">
                 info@makabisandbanet.com <br /> makabisandbanet@gmail.com
               </p>
             </div>
             <div className="flex items-center w-full gap-6">
               <Phone size={25} className="text-white" />
               <div className="flex flex-col w-full gap">
-                <p className="text-base text-white font-normal">014542856</p>
-                <p className="max-w-4xl text-base text-white font-normal">
+                <p className="text-sm md:text-base text-white font-normal">
+                  014542856
+                </p>
+                <p className="w-full md:max-w-4xl text-sm md:text-base text-white font-normal">
                   +234 808 477 8525
                 </p>
-                <p className="text-base text-white font-normal">
+                <p className="text-sm md:text-base text-white font-normal">
                   +234 806 639 4363
                 </p>
               </div>
@@ -100,13 +104,13 @@ const Footer = () => {
             <div className="flex w-full items-center  gap-6">
               <MapPin size={25} className="text-white" />
               <div className="flex flex-col gap">
-                <p className="text-base text-white font-normal">
+                <p className="text-sm md:text-base text-white font-normal">
                   6, Gbajobi Street off Balogun
                 </p>
-                <p className="text-base text-white font-normal">
+                <p className="text-sm md:text-base text-white font-normal">
                   Street, Ikeja Lagos,
                 </p>
-                <p className="text-base text-white font-normal">
+                <p className="text-sm md:text-base text-white font-normal">
                   23401, Nigeria{" "}
                 </p>
               </div>

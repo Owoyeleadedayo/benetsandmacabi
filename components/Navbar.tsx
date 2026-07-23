@@ -31,7 +31,7 @@ const Navbar = () => {
             width={50}
             className="cursor-pointer"
           />
-          <p className="text-white text-sm font-semibold">Makabis and Benet</p>
+          <p className="text-white text-sm font-semibold">Makabis & Benet</p>
         </Link>
 
         <div className="hidden md:flex items-center gap-6">

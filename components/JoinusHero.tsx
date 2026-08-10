@@ -1,11 +1,15 @@
 "use client"
+import { useState } from "react";
 import Celebrate from "@/components/Celebrate";
 import JoinOurTeam from "@/components/JoinOurTeam";
 import Newsletter from "@/components/Newsletter";
+import ApplyModal from "@/components/ApplyModal";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 
 const JoinusHero = () => {
+    const [isApplyOpen, setIsApplyOpen] = useState(false);
+
     const experience = [
         {
             id: 1,
@@ -59,15 +63,23 @@ const JoinusHero = () => {
           ))}
         </div>
         <div className="flex">
-            <p className="font-semibold text-lg text-black leading-6">Ready to shape unforgettable experiences? <br /> Join Makabis & Benet today.</p>
+            <p className="font-semibold text-lg text-black leading-6">Ready to shape unforgettable experiences? <br /> Join Makabis &amp; Benet today.</p>
         </div>
 
         <div>
-            <Button className="bg-[#0071B3] text-white text-base font-bold">Apply Now</Button>
+            <Button
+              className="bg-[#0071B3] text-white text-base font-bold cursor-pointer"
+              onClick={() => setIsApplyOpen(true)}
+            >
+              Apply Now
+            </Button>
         </div>
       </div>
       <Newsletter />
       <Celebrate />
+
+      {/* Apply Now Modal */}
+      <ApplyModal isOpen={isApplyOpen} onClose={() => setIsApplyOpen(false)} />
     </>
   )
 }

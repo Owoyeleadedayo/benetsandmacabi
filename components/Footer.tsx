@@ -118,7 +118,7 @@ const Footer = () => {
           </div>
         </div>
         <div className="col-span-2 flex flex-col gap-4 ml-0 xl:ml-20">
-          <p className="text-white text-lg font-medium">Instagram</p>
+          <p className="text-white text-lg font-medium">Youtube</p>
           <div className="grid grid-cols-3 gap-2">
             <div className="relative w-full h-21.25">
               <Image

@@ -23,15 +23,14 @@ const Navbar = () => {
   return (
     <nav className="sticky top-0 z-50 bg-black">
       <div className="flex items-center justify-between px-6 md:px-14 py-2">
-        <Link href="/" className="flex flex-col place-items-center gap-1">
+        <Link href="/">
           <Image
-            src="/img/M&B.png"
-            alt="logo"
-            height={50}
-            width={50}
-            className="cursor-pointer"
+            src="/img/newLogo.png"
+            alt="Makabis & Benet logo"
+            height={60}
+            width={120}
+            className="cursor-pointer object-contain"
           />
-          <p className="text-white text-sm font-semibold">Makabis & Benet</p>
         </Link>
 
         <div className="hidden md:flex items-center gap-6">
@@ -40,9 +39,8 @@ const Navbar = () => {
             return (
               <Link key={page.name} href={page.link}>
                 <span
-                  className={`font-semibold text-lg transition-colors hover:text-white ${
-                    isActive ? "text-white"  :"text-blue-500"
-                  }`}
+                  className={`font-semibold text-lg transition-colors hover:text-white ${isActive ? "text-white" : "text-blue-500"
+                    }`}
                 >
                   {page.name}
                 </span>
@@ -70,10 +68,11 @@ const Navbar = () => {
           >
             <div className="flex items-center justify-between px-6 py-5">
               <Image
-                src="/navbar.png"
-                alt="logo"
-                height={30}
-                width={120}
+                src="/img/newLogo.png"
+                alt="Makabis & Benet logo"
+                height={50}
+                width={140}
+                className="object-contain"
               />
               <button onClick={() => setOpen(false)} className="text-white">
                 <X size={30} />
@@ -95,9 +94,8 @@ const Navbar = () => {
                       onClick={() => setOpen(false)}
                     >
                       <span
-                        className={`text-2xl font-semibold ${
-                          isActive ? "text-blue-500" : "text-white"
-                        }`}
+                        className={`text-2xl font-semibold ${isActive ? "text-blue-500" : "text-white"
+                          }`}
                       >
                         {page.name}
                       </span>

@@ -20,11 +20,11 @@ const Footer = () => {
           <Link href={"/"} className="flex justify-start items-start">
             <Link href="/">
               <Image
-                src="/img/Logo-10.png"
-                alt="logo"
-                height={150}
+                src="/img/newLogo.png"
+                alt="Makabis & Benet logo"
+                height={100}
                 width={180}
-                className="cursor-pointer"
+                className="cursor-pointer object-contain"
               />
             </Link>
           </Link>

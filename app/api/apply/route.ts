@@ -63,6 +63,6 @@ export async function POST(req: Request) {
     return NextResponse.json({ success: true })
   } catch (err) {
     console.error('Nodemailer apply error:', err)
-    return NextResponse.json({ error: 'Failed to send application.' }, { status: 500 })
+    return NextResponse.json({ error: err instanceof Error ? err.message : 'Failed to send application.' }, { status: 500 })
   }
 }

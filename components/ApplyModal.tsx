@@ -83,12 +83,17 @@ const ApplyModal: React.FC<ApplyModalProps> = ({ isOpen, onClose }) => {
         body: JSON.stringify(form),
       });
 
-      if (!res.ok) throw new Error("Failed");
+      const data = await res.json().catch(() => null);
+
+      if (!res.ok) {
+        throw new Error(data?.error || "Failed to submit application.");
+      }
 
       setStatus("success");
-    } catch {
+    } catch (err: unknown) {
       setStatus("error");
-      setErrorMsg("Something went wrong. Please try again.");
+      const msg = err instanceof Error ? err.message : "Something went wrong. Please try again.";
+      setErrorMsg(msg);
     }
   };
 

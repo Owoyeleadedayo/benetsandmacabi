@@ -1,25 +1,30 @@
 // app/api/newsletter/route.ts
 import { NextResponse } from 'next/server'
-import nodemailer from 'nodemailer'
-
-const transporter = nodemailer.createTransport({
-  service: 'gmail',
-  auth: {
-    user: process.env.SMTP_USER,
-    pass: process.env.SMTP_PASS,
-  },
-})
+import { getTransporter } from '@/lib/mailer'
 
 export async function POST(req: Request) {
-  const { email } = await req.json()
-
-  if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-    return NextResponse.json({ error: 'A valid email is required.' }, { status: 400 })
-  }
-
   try {
+    const { email } = await req.json()
+
+    if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+      return NextResponse.json({ error: 'A valid email is required.' }, { status: 400 })
+    }
+
+    const smtpUser = process.env.SMTP_USER?.trim()
+    const smtpPass = process.env.SMTP_PASS?.replace(/\s+/g, '')
+
+    if (!smtpUser || !smtpPass) {
+      console.error('[Newsletter API] SMTP_USER or SMTP_PASS environment variable is missing.')
+      return NextResponse.json(
+        { error: 'Server email configuration error. Please check your production environment variables (SMTP_USER and SMTP_PASS).' },
+        { status: 500 }
+      )
+    }
+
+    const transporter = getTransporter()
+
     await transporter.sendMail({
-      from: `"Makabis & Benet" <${process.env.SMTP_USER}>`,
+      from: `"Makabis & Benet" <${smtpUser}>`,
       to: 'Makabisandbenet@gmail.com',
       replyTo: email,
       subject: 'New Newsletter Subscriber',
@@ -36,8 +41,12 @@ export async function POST(req: Request) {
     })
 
     return NextResponse.json({ success: true })
-  } catch (err) {
+  } catch (err: unknown) {
+    const message = err instanceof Error ? err.message : String(err)
     console.error('Nodemailer newsletter error:', err)
-    return NextResponse.json({ error: 'Failed to send.' }, { status: 500 })
+    return NextResponse.json(
+      { error: `Failed to send newsletter subscription email: ${message}` },
+      { status: 500 }
+    )
   }
 }

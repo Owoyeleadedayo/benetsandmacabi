@@ -1,25 +1,30 @@
 // app/api/apply/route.ts
 import { NextResponse } from 'next/server'
-import nodemailer from 'nodemailer'
-
-const transporter = nodemailer.createTransport({
-  service: 'gmail',
-  auth: {
-    user: process.env.SMTP_USER,
-    pass: process.env.SMTP_PASS,
-  },
-})
+import { getTransporter } from '@/lib/mailer'
 
 export async function POST(req: Request) {
-  const { fullName, email, phone, role, message } = await req.json()
-
-  if (!fullName || !email || !role) {
-    return NextResponse.json({ error: 'Full name, email, and role are required.' }, { status: 400 })
-  }
-
   try {
+    const { fullName, email, phone, role, message } = await req.json()
+
+    if (!fullName || !email || !role) {
+      return NextResponse.json({ error: 'Full name, email, and role are required.' }, { status: 400 })
+    }
+
+    const smtpUser = process.env.SMTP_USER?.trim()
+    const smtpPass = process.env.SMTP_PASS?.replace(/\s+/g, '')
+
+    if (!smtpUser || !smtpPass) {
+      console.error('[Apply API] SMTP_USER or SMTP_PASS environment variable is missing.')
+      return NextResponse.json(
+        { error: 'Server email configuration error. Please check your production environment variables (SMTP_USER and SMTP_PASS).' },
+        { status: 500 }
+      )
+    }
+
+    const transporter = getTransporter()
+
     await transporter.sendMail({
-      from: `"Makabis & Benet Careers" <${process.env.SMTP_USER}>`,
+      from: `"Makabis & Benet Careers" <${smtpUser}>`,
       to: 'Makabisandbenet@gmail.com',
       replyTo: email,
       subject: `New Job Application: ${role}`,
@@ -61,8 +66,12 @@ export async function POST(req: Request) {
     })
 
     return NextResponse.json({ success: true })
-  } catch (err) {
+  } catch (err: unknown) {
+    const message = err instanceof Error ? err.message : String(err)
     console.error('Nodemailer apply error:', err)
-    return NextResponse.json({ error: err instanceof Error ? err.message : 'Failed to send application.' }, { status: 500 })
+    return NextResponse.json(
+      { error: `Failed to send application email: ${message}` },
+      { status: 500 }
+    )
   }
 }

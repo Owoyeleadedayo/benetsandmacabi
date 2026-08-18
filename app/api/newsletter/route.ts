@@ -1,8 +1,14 @@
 // app/api/newsletter/route.ts
 import { NextResponse } from 'next/server'
-import { Resend } from 'resend'
+import nodemailer from 'nodemailer'
 
-const resend = new Resend(process.env.RESEND_API_KEY)
+const transporter = nodemailer.createTransport({
+  service: 'gmail',
+  auth: {
+    user: process.env.SMTP_USER,
+    pass: process.env.SMTP_PASS,
+  },
+})
 
 export async function POST(req: Request) {
   const { email } = await req.json()
@@ -12,8 +18,8 @@ export async function POST(req: Request) {
   }
 
   try {
-    await resend.emails.send({
-      from: 'Makabis & Benet <onboarding@resend.dev>',
+    await transporter.sendMail({
+      from: `"Makabis & Benet" <${process.env.SMTP_USER}>`,
       to: 'Makabisandbenet@gmail.com',
       replyTo: email,
       subject: 'New Newsletter Subscriber',
@@ -31,7 +37,7 @@ export async function POST(req: Request) {
 
     return NextResponse.json({ success: true })
   } catch (err) {
-    console.error('Resend newsletter error:', err)
+    console.error('Nodemailer newsletter error:', err)
     return NextResponse.json({ error: 'Failed to send.' }, { status: 500 })
   }
 }

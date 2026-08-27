@@ -1,6 +1,6 @@
 // app/api/newsletter/route.ts
 import { NextResponse } from 'next/server'
-import { getTransporter } from '@/lib/mailer'
+import { getResendClient } from '@/lib/resend'
 
 export async function POST(req: Request) {
   try {
@@ -10,22 +10,23 @@ export async function POST(req: Request) {
       return NextResponse.json({ error: 'A valid email is required.' }, { status: 400 })
     }
 
-    const smtpUser = process.env.SMTP_USER?.trim()
-    const smtpPass = process.env.SMTP_PASS?.replace(/\s+/g, '')
+    const apiKey = process.env.RESEND_API_KEY?.trim()
 
-    if (!smtpUser || !smtpPass) {
-      console.error('[Newsletter API] SMTP_USER or SMTP_PASS environment variable is missing.')
+    if (!apiKey) {
+      console.error('[Newsletter API] RESEND_API_KEY environment variable is missing.')
       return NextResponse.json(
-        { error: 'Server email configuration error. Please check your production environment variables (SMTP_USER and SMTP_PASS).' },
+        { error: 'Server email configuration error. Please ensure RESEND_API_KEY is configured in your environment variables.' },
         { status: 500 }
       )
     }
 
-    const transporter = getTransporter()
+    const resend = getResendClient()
+    const fromEmail = process.env.RESEND_FROM_EMAIL || 'Makabis & Benet <onboarding@resend.dev>'
+    const toEmail = process.env.TO_EMAIL || 'Makabisandbenet@gmail.com'
 
-    await transporter.sendMail({
-      from: `"Makabis & Benet" <${smtpUser}>`,
-      to: 'Makabisandbenet@gmail.com',
+    const { data, error } = await resend.emails.send({
+      from: fromEmail,
+      to: [toEmail],
       replyTo: email,
       subject: 'New Newsletter Subscriber',
       html: `
@@ -40,10 +41,18 @@ export async function POST(req: Request) {
       `,
     })
 
-    return NextResponse.json({ success: true })
+    if (error) {
+      console.error('Resend newsletter error:', error)
+      return NextResponse.json(
+        { error: `Failed to send subscriber email: ${error.message}` },
+        { status: 500 }
+      )
+    }
+
+    return NextResponse.json({ success: true, data })
   } catch (err: unknown) {
     const message = err instanceof Error ? err.message : String(err)
-    console.error('Nodemailer newsletter error:', err)
+    console.error('Resend newsletter catch error:', err)
     return NextResponse.json(
       { error: `Failed to send newsletter subscription email: ${message}` },
       { status: 500 }

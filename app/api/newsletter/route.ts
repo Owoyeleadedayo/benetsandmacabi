@@ -22,7 +22,7 @@ export async function POST(req: Request) {
 
     const resend = getResendClient()
     const fromEmail = process.env.RESEND_FROM_EMAIL || 'Makabis & Benet <onboarding@resend.dev>'
-    const toEmail = process.env.TO_EMAIL || 'Makabisandbenet@gmail.com'
+    const toEmail = process.env.TO_EMAIL || 'owoyeleadedayo25@gmail.com'
 
     const { data, error } = await resend.emails.send({
       from: fromEmail,

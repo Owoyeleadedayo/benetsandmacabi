@@ -69,11 +69,21 @@ const Footer = () => {
         <div className="flex flex-col gap-4">
           <p className="text-white text-lg font-medium">Quick link</p>
           <div className="flex flex-col gap-2">
-            <p className="text-white text-sm md:text-base font-normal">About Us</p>
-            <p className="text-white text-sm md:text-base font-normal">Projects</p>
-            <p className="text-white text-sm md:text-base font-normal">Contact Us</p>
-            <p className="text-white text-sm md:text-base font-normal">Services</p>
-            <p className="text-white text-sm md:text-base font-normal">Careers</p>
+            <p className="text-white text-sm md:text-base font-normal">
+              About Us
+            </p>
+            <p className="text-white text-sm md:text-base font-normal">
+              Projects
+            </p>
+            <p className="text-white text-sm md:text-base font-normal">
+              Contact Us
+            </p>
+            <p className="text-white text-sm md:text-base font-normal">
+              Services
+            </p>
+            <p className="text-white text-sm md:text-base font-normal">
+              Careers
+            </p>
           </div>
         </div>
         <div className="flex flex-col gap-4">
@@ -123,8 +133,8 @@ const Footer = () => {
             {[
               "qB6xWdaVuTs",
               "2FwNu5rh6-U",
-              "4j3e1HJc05E",
-              "97h3iEg705M",
+              "55kZNWkSWJk",
+              "dxLqVag_qgA",
               "tmHL-ht8NcI",
               "BoM5cPLYQoY",
             ].map((id) => (

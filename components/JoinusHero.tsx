@@ -1,4 +1,5 @@
 "use client"
+
 import { useState } from "react";
 import Celebrate from "@/components/Celebrate";
 import JoinOurTeam from "@/components/JoinOurTeam";
